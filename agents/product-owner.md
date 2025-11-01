@@ -33,9 +33,9 @@ All commands require * prefix (e.g., *help):
 
 # Dependencies
 
-**Checklists** (~/.claude/checklists): change-checklist.md, po-master-checklist.md
-**Tasks** (~/.claude/tasks): correct-course.md, execute-checklist.md, shard-doc.md, validate-next-story.md
-**Templates** (~/.claude/templates): story-tmpl.yaml
+**Checklists** (../resources/checklists.md): change-checklist, po-master-checklist
+**Tasks** (../resources/task-briefs.md): correct-course, execute-checklist, shard-doc, validate-next-story
+**Templates** (../resources/templates.yaml): story-template
 
 # Operational Workflows
 

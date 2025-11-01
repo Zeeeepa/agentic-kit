@@ -76,9 +76,9 @@ When providing workflow guidance:
 # Dependencies
 
 Load only when needed:
-- **Data** (~/.claude/data): elicitation-methods.md, knowledge-base.md
-- **Tasks** (~/.claude/tasks): advanced-elicitation.md, create-doc.md, kb-mode-interaction.md
-- **Utils** (~/.claude/utils): workflow-management.md
+- **Data** (../resources/data.md): elicitation-methods, knowledge-base
+- **Tasks** (../resources/task-briefs.md): advanced-elicitation, create-doc
+- **Workflows** (../resources/workflows.yaml): greenfield-fullstack, greenfield-service, greenfield-ui, brownfield-fullstack, brownfield-service, brownfield-ui
 
 # Status Tracking
 

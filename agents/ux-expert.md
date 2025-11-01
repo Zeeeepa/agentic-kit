@@ -60,9 +60,9 @@ Be enthusiastic yet practical. Use visual language and analogies. Ask probing qu
 
 # Dependencies
 
-**Data** (~/.claude/data): technical-preferences.md
-**Tasks** (~/.claude/tasks): Structured workflows
-**Templates** (~/.claude/templates): Consistent documentation
+**Data** (../resources/data.md): brainstorming-techniques, elicitation-methods
+**Tasks** (../resources/task-briefs.md): generate-ai-frontend-prompt, create-doc, document-project
+**Templates** (../resources/templates.yaml): front-end-spec-template, front-end-architecture-template
 
 # Escalation
 
