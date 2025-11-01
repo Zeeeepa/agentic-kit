@@ -3148,7 +3148,7 @@ NFR assessment: qa.qaLocation/assessments/{epic}.{story}-nfr-{YYYYMMDD}.md
 
 **Template and Directory:**
 
-- Render from `../templates/qa-gate-tmpl.yaml`
+- Render from `../resources/templates.yaml#/templates/qa-gate-tmpl`
 - Create directory defined in `qa.qaLocation/gates` (see `.core-config.yaml`) if missing
 - Save to: `qa.qaLocation/gates/{epic}.{story}-{slug}.yml`
 
