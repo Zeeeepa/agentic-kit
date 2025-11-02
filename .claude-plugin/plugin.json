@@ -1,6 +1,6 @@
 {
   "name": "Agentic Toolkit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Comprehensive toolkit for AI-driven software development with 13 specialized agents and 14 powerful skills",
   "author": "Anthropic",
   "default_variant": "standard",
@@ -34,6 +34,11 @@
       "name": "register-agents",
       "path": "hooks/register-agents.js",
       "event": "plugin-load"
+    },
+    {
+      "name": "session-start",
+      "path": "hooks/session-start.js",
+      "event": "session-start"
     }
   ],
   "resources": {

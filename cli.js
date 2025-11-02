@@ -7,11 +7,11 @@
  * It handles variant selection and provides helpful CLI output for users.
  *
  * Usage:
- *   npx agentic-kit              # Install standard variant (default)
- *   npx agentic-kit@lite         # Install lite variant
- *   npx agentic-kit@pro          # Install pro variant
- *   npx agentic-kit --variant=lite   # Install lite variant via flag
- *   npx agentic-kit --help       # Show help message
+ *   npx @amrhas82/agentic-kit              # Install standard variant (default)
+ *   npx @amrhas82/agentic-kit --variant=lite   # Install lite variant via flag
+ *   npx @amrhas82/agentic-kit --variant=pro    # Install pro variant via flag
+ *   npx agkit                              # Shorter alias
+ *   npx @amrhas82/agentic-kit --help       # Show help message
  */
 
 const fs = require('fs');
@@ -51,10 +51,10 @@ ${colors.bright}VARIANTS:${colors.reset}
   ${colors.magenta}pro${colors.reset}         13 agents, 14 skills - Maximum capabilities
 
 ${colors.bright}USAGE:${colors.reset}
-  ${colors.cyan}npx agentic-kit${colors.reset}                # Install standard variant (default)
-  ${colors.cyan}npx agentic-kit@lite${colors.reset}           # Install lite variant
-  ${colors.cyan}npx agentic-kit@pro${colors.reset}            # Install pro variant
-  ${colors.cyan}npx agentic-kit --variant=lite${colors.reset} # Install lite variant via flag
+  ${colors.cyan}npx @amrhas82/agentic-kit${colors.reset}                # Install standard variant (default)
+  ${colors.cyan}npx @amrhas82/agentic-kit --variant=lite${colors.reset} # Install lite variant via flag
+  ${colors.cyan}npx @amrhas82/agentic-kit --variant=pro${colors.reset}  # Install pro variant via flag
+  ${colors.cyan}npx agkit${colors.reset}                                # Shorter alias
 
 ${colors.bright}CLAUDE CODE MARKETPLACE:${colors.reset}
   You can also install this plugin directly in Claude Code:
