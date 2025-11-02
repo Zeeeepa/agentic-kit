@@ -32,10 +32,10 @@ teams:
       icon: "\u26A1"
       description: Only the bare minimum for the IDE PO scrum-master dev qa cycle.
     agents:
-    - po
+    - product-owner
     - scrum-master
-    - dev
-    - qa
+    - full-stack-dev
+    - qa-test-architect
     workflows: null
   team-no-ui:
     bundle:
