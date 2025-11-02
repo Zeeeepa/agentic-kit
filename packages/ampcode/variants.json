@@ -1,0 +1,45 @@
+{
+  "lite": {
+    "name": "Lite",
+    "description": "Minimal installation for basic amplified AI codegen with core coordination agents",
+    "useCase": "Users wanting to try Ampcode with minimal footprint and essential accelerated workflow management",
+    "targetUsers": "Beginners, evaluators, users with limited system resources, developers new to amplified workflows",
+    "agents": [
+      "master",
+      "orchestrator",
+      "scrum-master"
+    ],
+    "skills": [],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "standard": {
+    "name": "Standard",
+    "description": "Balanced installation with all agents and essential document processing optimized for amplified development",
+    "useCase": "Professional accelerated development with comprehensive AI codegen plus core automation and document creation",
+    "targetUsers": "Professional developers, teams focused on velocity, users seeking amplified productivity",
+    "agents": "*",
+    "skills": [
+      "pdf",
+      "docx",
+      "xlsx",
+      "pptx",
+      "canvas-design",
+      "theme-factory",
+      "brand-guidelines",
+      "internal-comms"
+    ],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "pro": {
+    "name": "Pro",
+    "description": "Complete installation with all capabilities optimized for maximum amplified development and automation",
+    "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, and advanced automation capabilities",
+    "targetUsers": "Power users, enterprises, teams requiring maximum velocity, automation-focused developers",
+    "agents": "*",
+    "skills": "*",
+    "resources": "*",
+    "hooks": "*"
+  }
+}

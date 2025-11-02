@@ -1,0 +1,45 @@
+{
+  "lite": {
+    "name": "Lite",
+    "description": "Minimal installation for basic CLI-based AI codegen with core coordination agents",
+    "useCase": "Users wanting to try Opencode with minimal footprint and essential command-line workflow management",
+    "targetUsers": "Beginners, evaluators, users with limited system resources, terminal-focused developers",
+    "agents": [
+      "master",
+      "orchestrator",
+      "scrum-master"
+    ],
+    "skills": [],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "standard": {
+    "name": "Standard",
+    "description": "Balanced installation with all agents and essential document processing optimized for CLI workflows",
+    "useCase": "Professional terminal-based development with comprehensive AI codegen plus core document creation skills",
+    "targetUsers": "Professional developers, CLI power users, teams preferring command-line tools",
+    "agents": "*",
+    "skills": [
+      "pdf",
+      "docx",
+      "xlsx",
+      "pptx",
+      "canvas-design",
+      "theme-factory",
+      "brand-guidelines",
+      "internal-comms"
+    ],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "pro": {
+    "name": "Pro",
+    "description": "Complete installation with all capabilities optimized for advanced CLI-based development and automation",
+    "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, and terminal automation capabilities",
+    "targetUsers": "Power users, enterprises, DevOps teams, terminal workflow enthusiasts",
+    "agents": "*",
+    "skills": "*",
+    "resources": "*",
+    "hooks": "*"
+  }
+}

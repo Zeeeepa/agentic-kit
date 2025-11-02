@@ -1,0 +1,45 @@
+{
+  "lite": {
+    "name": "Lite",
+    "description": "Minimal installation for basic AI codegen capabilities with core coordination agents",
+    "useCase": "Users wanting to try Claude Code with minimal footprint and essential workflow management",
+    "targetUsers": "Beginners, evaluators, users with limited system resources",
+    "agents": [
+      "master",
+      "orchestrator",
+      "scrum-master"
+    ],
+    "skills": [],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "standard": {
+    "name": "Standard",
+    "description": "Balanced installation with all agents and essential document processing and design capabilities",
+    "useCase": "Professional development with comprehensive AI codegen plus core document creation and design skills",
+    "targetUsers": "Professional developers, teams, most users",
+    "agents": "*",
+    "skills": [
+      "pdf",
+      "docx",
+      "xlsx",
+      "pptx",
+      "canvas-design",
+      "theme-factory",
+      "brand-guidelines",
+      "internal-comms"
+    ],
+    "resources": "*",
+    "hooks": "*"
+  },
+  "pro": {
+    "name": "Pro",
+    "description": "Complete installation with all capabilities including advanced development, testing, and creative skills",
+    "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, debugging, and creative capabilities",
+    "targetUsers": "Power users, enterprises, teams requiring comprehensive feature set",
+    "agents": "*",
+    "skills": "*",
+    "resources": "*",
+    "hooks": "*"
+  }
+}
