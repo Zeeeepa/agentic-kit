@@ -10,7 +10,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "validate": "node ./validate-package.js",
-    "prepublishOnly": "npm run validate"
+    "prepublishOnly": "npm run validate",
+    "publish:npm": "npm publish --registry https://registry.npmjs.org --access public",
+    "publish:github": "npm publish --registry https://npm.pkg.github.com",
+    "publish:both": "npm run publish:npm && npm run publish:github"
   },
   "keywords": [
     "claude",
@@ -39,6 +42,10 @@
     "url": "https://github.com/amrhas82/agentic-kit/issues"
   },
   "homepage": "https://github.com/amrhas82/agentic-kit#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "engines": {
     "node": ">=14.0.0"
   },

@@ -717,7 +717,7 @@ A: Agents are AI assistants with roles. Skills are executable tools agents can u
   - [SKILLS.md](SKILLS.md) - Complete skill reference
   - [ARCHITECTURE.md](ARCHITECTURE.md) - Technical architecture
   - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-  - [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Detailed troubleshooting
+  - [TROUBLESHOOTING.md](../TROUBLESHOOTING.md) - Detailed troubleshooting
   - [PUBLISHING.md](PUBLISHING.md) - Publishing guide
 
 ---

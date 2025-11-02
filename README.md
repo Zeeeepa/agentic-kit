@@ -55,9 +55,9 @@ npx agkit --variant=lite
 | Document | Description |
 |----------|-------------|
 | **[KNOWLEDGE_BASE.md](docs/KNOWLEDGE_BASE.md)** | Complete reference: all agents, skills, architecture |
-| **[QUICK-START.md](docs/QUICK-START.md)** | 15-minute onboarding guide |
-| **[VARIANTS.md](docs/VARIANTS.md)** | Compare variants and choose the right one |
-| **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** | Common issues and solutions |
+| **[QUICK-START.md](QUICK-START.md)** | 15-minute onboarding guide |
+| **[VARIANTS.md](VARIANTS.md)** | Compare variants and choose the right one |
+| **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** | Common issues and solutions |
 | **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** | Contribution guidelines |
 | **[PUBLISHING.md](docs/PUBLISHING.md)** | Publishing guide for maintainers |
 
@@ -216,4 +216,4 @@ MIT © 2025 amrhas82
 
 ---
 
-**Need help?** Check [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) or [open an issue](https://github.com/amrhas82/agentic-kit/issues)
+**Need help?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or [open an issue](https://github.com/amrhas82/agentic-kit/issues)

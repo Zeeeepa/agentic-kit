@@ -718,7 +718,7 @@ npm install -g agentic-toolkit
 3. **[AGENTS.md](AGENTS.md)** - Agent documentation
 4. **[SKILLS.md](SKILLS.md)** - Skill documentation
 5. **[ARCHITECTURE.md](ARCHITECTURE.md)** - Technical details
-6. **[CONTRIBUTING.md](CONTRIBUTING.md)** - Extension guide
+6. **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** - Extension guide
 
 ### Contacting Support
 
