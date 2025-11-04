@@ -278,10 +278,11 @@ class PackageManager {
           // For agents, strip the .md extension
           if (dir.includes('agents')) {
             result.push(item.replace('.md', ''));
-          } else {
+          } else if (dir.includes('resources') || dir.includes('hooks')) {
             // For resources and hooks, keep the full filename
             result.push(item);
           }
+          // For skills directory, ignore files (only directories are skills)
         } else if (stat.isDirectory()) {
           // For skills (which are directories), include the directory name
           result.push(item);
