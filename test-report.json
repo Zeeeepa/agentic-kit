@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-11-05T09:39:11.895Z",
+  "timestamp": "2025-11-05T09:54:42.422Z",
   "summary": {
     "totalTests": 348,
     "totalPassed": 345,
     "totalFailed": 3,
     "passRate": "99.1",
-    "duration": 6381
+    "duration": 6713
   },
   "suites": [
     {
@@ -14,7 +14,7 @@
       "passed": 92,
       "failed": 0,
       "passRate": 100,
-      "duration": 2283,
+      "duration": 2337,
       "error": null
     },
     {
@@ -23,7 +23,7 @@
       "passed": 78,
       "failed": 0,
       "passRate": 100,
-      "duration": 3757,
+      "duration": 4030,
       "error": null
     },
     {
@@ -32,7 +32,7 @@
       "passed": 35,
       "failed": 1,
       "passRate": 97.2,
-      "duration": 157,
+      "duration": 159,
       "error": null
     },
     {
@@ -41,7 +41,7 @@
       "passed": 76,
       "failed": 0,
       "passRate": 100,
-      "duration": 99,
+      "duration": 98,
       "error": null
     },
     {
@@ -50,7 +50,7 @@
       "passed": 64,
       "failed": 2,
       "passRate": 97,
-      "duration": 79,
+      "duration": 82,
       "error": null
     }
   ]

@@ -1,6 +1,6 @@
 # Agentic Kit Installer - Test Report
 
-**Generated**: 2025-11-05T09:39:11.895Z
+**Generated**: 2025-11-05T09:54:42.422Z
 
 ## Summary
 
@@ -10,7 +10,7 @@
 | Passed | 345 |
 | Failed | 3 |
 | Pass Rate | 99.1% |
-| Duration | 6.38s |
+| Duration | 6.71s |
 
 ## Test Suite Results
 
@@ -20,7 +20,7 @@
 - **Passed**: 92
 - **Failed**: 0
 - **Pass Rate**: 100%
-- **Duration**: 2283ms
+- **Duration**: 2337ms
 
 ### 2. ✅ Multi-Tool Installation
 
@@ -28,7 +28,7 @@
 - **Passed**: 78
 - **Failed**: 0
 - **Pass Rate**: 100%
-- **Duration**: 3757ms
+- **Duration**: 4030ms
 
 ### 3. ⚠️ Error Scenario Testing
 
@@ -36,7 +36,7 @@
 - **Passed**: 35
 - **Failed**: 1
 - **Pass Rate**: 97.2%
-- **Duration**: 157ms
+- **Duration**: 159ms
 
 ### 4. ✅ Path Handling Testing
 
@@ -44,7 +44,7 @@
 - **Passed**: 76
 - **Failed**: 0
 - **Pass Rate**: 100%
-- **Duration**: 99ms
+- **Duration**: 98ms
 
 ### 5. ⚠️ Cross-Platform Testing
 
@@ -52,7 +52,7 @@
 - **Passed**: 64
 - **Failed**: 2
 - **Pass Rate**: 97%
-- **Duration**: 79ms
+- **Duration**: 82ms
 
 ## Final Status
 
