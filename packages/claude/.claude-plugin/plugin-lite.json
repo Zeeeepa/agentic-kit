@@ -1,6 +1,6 @@
 {
   "name": "Agentic Toolkit - Lite",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Lightweight variant with 3 core agents and no skills for minimal dependencies",
   "variant": "lite",
   "agents": [
@@ -29,11 +29,6 @@
       "name": "register-agents",
       "path": "hooks/register-agents.js",
       "event": "plugin-load"
-    },
-    {
-      "name": "session-start",
-      "path": "hooks/session-start.js",
-      "event": "session-start"
     }
   ],
   "resources": {

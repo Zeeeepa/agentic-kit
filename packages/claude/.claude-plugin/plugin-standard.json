@@ -1,6 +1,6 @@
 {
   "name": "Agentic Toolkit - Standard",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Standard variant with all 13 agents and 8 core production skills",
   "variant": "standard",
   "agents": [
@@ -138,11 +138,6 @@
       "name": "register-agents",
       "path": "hooks/register-agents.js",
       "event": "plugin-load"
-    },
-    {
-      "name": "session-start",
-      "path": "hooks/session-start.js",
-      "event": "session-start"
     }
   ],
   "resources": {
