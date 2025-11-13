@@ -8,7 +8,8 @@
       "1-create-prd",
       "2-generate-tasks",
       "3-process-task-list",
-      "master"
+      "master",
+      "context-initializer"
     ],
     "skills": [
       "docx",
@@ -36,7 +37,8 @@
       "qa-test-architect",
       "full-stack-dev",
       "business-analyst",
-      "ux-expert"
+      "ux-expert",
+      "context-initializer"
     ],
     "skills": [
       "docx",

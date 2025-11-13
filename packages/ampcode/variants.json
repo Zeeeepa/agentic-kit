@@ -1,14 +1,15 @@
 {
   "lite": {
     "name": "Lite",
-    "description": "Essential workflow agents with core document and debugging skills optimized for amplified development",
-    "useCase": "Users wanting comprehensive amplified workflow management with essential document processing and debugging capabilities",
-    "targetUsers": "Beginners, evaluators, developers wanting balanced features with amplified productivity",
+    "description": "Essential workflow agents with core document and debugging skills",
+    "useCase": "Users wanting comprehensive workflow management with essential document processing and debugging capabilities",
+    "targetUsers": "Beginners, evaluators, users wanting balanced features with moderate footprint",
     "agents": [
       "1-create-prd",
       "2-generate-tasks",
       "3-process-task-list",
-      "master"
+      "master",
+      "context-initializer"
     ],
     "skills": [
       "docx",
@@ -24,9 +25,9 @@
   },
   "standard": {
     "name": "Standard",
-    "description": "Complete workflow and development team with enhanced testing and validation skills for amplified development",
-    "useCase": "Professional accelerated development with full team coordination, testing, and comprehensive skill set",
-    "targetUsers": "Professional developers, teams focused on velocity, quality-focused users",
+    "description": "Complete workflow and development team with enhanced testing and validation skills",
+    "useCase": "Professional development with full team coordination, testing, and comprehensive skill set",
+    "targetUsers": "Professional developers, teams, quality-focused users",
     "agents": [
       "1-create-prd",
       "2-generate-tasks",
@@ -36,7 +37,8 @@
       "qa-test-architect",
       "full-stack-dev",
       "business-analyst",
-      "ux-expert"
+      "ux-expert",
+      "context-initializer"
     ],
     "skills": [
       "docx",
@@ -56,9 +58,9 @@
   },
   "pro": {
     "name": "Pro",
-    "description": "Complete installation with all capabilities optimized for maximum amplified development and automation",
-    "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, and advanced automation capabilities",
-    "targetUsers": "Power users, enterprises, teams requiring maximum velocity, automation-focused developers",
+    "description": "Complete installation with all capabilities including advanced development, testing, and creative skills",
+    "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, debugging, and creative capabilities",
+    "targetUsers": "Power users, enterprises, teams requiring comprehensive feature set",
     "agents": "*",
     "skills": "*",
     "resources": "*",
