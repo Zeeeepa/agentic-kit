@@ -36,74 +36,78 @@ Install and invoke for your platform:
 ## 🤖 14 Subagents
 
 ### Workflow Phase Agents (3)
-| Agent | Purpose |
-|-------|---------|
-| **1-create-prd** | Create Product Requirement Documents with structured scope and requirements |
-| **2-generate-tasks** | Break PRDs into granular, actionable task lists |
-| **3-process-task-list** | Execute tasks iteratively with built-in review and progress tracking |
+| Agent | Purpose | Token Load* |
+|-------|---------|------------|
+| **1-create-prd** | Create Product Requirement Documents with structured scope and requirements | ~889 tokens |
+| **2-generate-tasks** | Break PRDs into granular, actionable task lists | ~1,029 tokens |
+| **3-process-task-list** | Execute tasks iteratively with built-in review and progress tracking | ~1,004 tokens |
 
 **Recommended Workflow:** PRD → Tasks → Process → Complete
 
 ### Specialist Agents (11)
-| Agent | Purpose |
-|-------|---------|
-| **ux-expert** | UI/UX design, wireframes, prototypes, front-end specifications |
-| **scrum-master** | User stories, epic management, agile process guidance |
-| **qa-test-architect** | Test architecture, quality gates, code review feedback |
-| **product-owner** | Backlog management, story refinement, acceptance criteria |
-| **product-manager** | PRDs, product strategy, feature prioritization, roadmaps |
-| **full-stack-dev** | Code implementation, debugging, refactoring |
-| **holistic-architect** | System design, architecture docs, API design, scalability |
-| **business-analyst** | Market research, competitive analysis, project discovery |
-| **orchestrator** | Workflow coordination, multi-agent task management, automatic routing |
-| **master** | Comprehensive expertise across all domains, universal executor |
-| **context-initializer** | Project context setup, documentation discovery, creates CLAUDE.md with agent system |
+| Agent | Purpose | Token Load* |
+|-------|---------|------------|
+| **ux-expert** | UI/UX design, wireframes, prototypes, front-end specifications | ~1,113 tokens |
+| **scrum-master** | User stories, epic management, agile process guidance | ~927 tokens |
+| **qa-test-architect** | Test architecture, quality gates, code review feedback | ~1,351 tokens |
+| **product-owner** | Backlog management, story refinement, acceptance criteria | ~1,299 tokens |
+| **product-manager** | PRDs, product strategy, feature prioritization, roadmaps | ~1,243 tokens |
+| **full-stack-dev** | Code implementation, debugging, refactoring | ~1,025 tokens |
+| **holistic-architect** | System design, architecture docs, API design, scalability | ~1,427 tokens |
+| **business-analyst** | Market research, competitive analysis, project discovery | ~1,295 tokens |
+| **orchestrator** | Workflow coordination, multi-agent task management, automatic routing | ~2,161 tokens |
+| **master** | Comprehensive expertise across all domains, universal executor | ~1,073 tokens |
+| **context-initializer** | Project context setup, documentation discovery, creates CLAUDE.md with agent system | ~3,544 tokens |
+
+**\*Progressive Disclosure:** Token loads shown are **full agent sizes when invoked**. Your base conversation only loads lightweight stubs (~50-90 tokens each, ~967 tokens total for all 14 agents). Full agent content loads only when you invoke that specific agent via `Task` tool. Check with `/context` command to see actual current usage.
 
 ---
 
 ## 🛠 22 Reusable Skills
 
 ### Development & Testing (7)
-| Skill | Purpose |
-|-------|---------|
-| **test-driven-development** | Write tests first, red-green-refactor cycle ensures tests verify behavior |
-| **testing-anti-patterns** | Avoid mock testing, test-only code, and mindless mocking |
-| **code-review** | Structured code review workflow before merging |
-| **systematic-debugging** | Four-phase debugging: investigate → analyze → hypothesize → implement |
-| **root-cause-tracing** | Trace bugs backward through call stack to find original trigger |
-| **condition-based-waiting** | Replace timeouts with polling to eliminate flaky tests |
-| **verification-before-completion** | Verify claims with evidence before marking tasks complete |
+| Skill | Purpose | Token Load* |
+|-------|---------|------------|
+| **test-driven-development** | Write tests first, red-green-refactor cycle ensures tests verify behavior | ~2,434 tokens |
+| **testing-anti-patterns** | Avoid mock testing, test-only code, and mindless mocking | ~2,101 tokens |
+| **code-review** | Structured code review workflow before merging | ~846 tokens |
+| **systematic-debugging** | Four-phase debugging: investigate → analyze → hypothesize → implement | ~163 tokens |
+| **root-cause-tracing** | Trace bugs backward through call stack to find original trigger | ~1,400 tokens |
+| **condition-based-waiting** | Replace timeouts with polling to eliminate flaky tests | ~937 tokens |
+| **verification-before-completion** | Verify claims with evidence before marking tasks complete | ~1,050 tokens |
 
 ### Design & Creativity (5)
-| Skill | Purpose |
-|-------|---------|
-| **algorithmic-art** | Create generative art using p5.js with seeded randomness |
-| **canvas-design** | Create visual art in PNG/PDF with design philosophy |
-| **artifacts-builder** | Build React/TypeScript/Tailwind/shadcn artifacts with Parcel bundling |
-| **theme-factory** | Apply 10 curated professional themes with color/font pairings |
-| **slack-gif-creator** | Create optimized animated GIFs for Slack |
+| Skill | Purpose | Token Load* |
+|-------|---------|------------|
+| **algorithmic-art** | Create generative art using p5.js with seeded randomness | ~4,942 tokens |
+| **canvas-design** | Create visual art in PNG/PDF with design philosophy | ~2,984 tokens |
+| **artifacts-builder** | Build React/TypeScript/Tailwind/shadcn artifacts with Parcel bundling | ~769 tokens |
+| **theme-factory** | Apply 10 curated professional themes with color/font pairings | ~781 tokens |
+| **slack-gif-creator** | Create optimized animated GIFs for Slack | ~4,285 tokens |
 
 ### Office & Document Processing (4)
-| Skill | Purpose |
-|-------|---------|
-| **pdf** | Extract/create PDFs, merge/split, handle forms and tables |
-| **docx** | Create/edit Word documents with tracked changes and comments |
-| **pptx** | Create/edit PowerPoint with design-first approach and HTML conversion |
-| **xlsx** | Create/edit spreadsheets with formulas, formatting, and data analysis |
+| Skill | Purpose | Token Load* |
+|-------|---------|------------|
+| **pdf** | Extract/create PDFs, merge/split, handle forms and tables | ~2,359 tokens |
+| **docx** | Create/edit Word documents with tracked changes and comments | ~2,537 tokens |
+| **pptx** | Create/edit PowerPoint with design-first approach and HTML conversion | ~6,387 tokens |
+| **xlsx** | Create/edit spreadsheets with formulas, formatting, and data analysis | ~2,658 tokens |
 
 ### Strategy & Communication (4)
-| Skill | Purpose |
-|-------|---------|
-| **brainstorming** | Collaborative design through questioning and exploration |
-| **internal-comms** | Write internal communications with company-approved formats |
-| **brand-guidelines** | Apply Anthropic's official brand colors and typography |
-| **mcp-builder** | Create MCP servers for LLM-service integration |
+| Skill | Purpose | Token Load* |
+|-------|---------|------------|
+| **brainstorming** | Collaborative design through questioning and exploration | ~640 tokens |
+| **internal-comms** | Write internal communications with company-approved formats | ~377 tokens |
+| **brand-guidelines** | Apply Anthropic's official brand colors and typography | ~558 tokens |
+| **mcp-builder** | Create MCP servers for LLM-service integration | ~3,388 tokens |
 
 ### Specialized (2)
-| Skill | Purpose |
-|-------|---------|
-| **webapp-testing** | Test local web apps with Playwright – verify, debug, screenshot |
-| **skill-creator** | Create custom skills extending Claude's capabilities |
+| Skill | Purpose | Token Load* |
+|-------|---------|------------|
+| **webapp-testing** | Test local web apps with Playwright – verify, debug, screenshot | ~978 tokens |
+| **skill-creator** | Create custom skills extending Claude's capabilities | ~2,886 tokens |
+
+**\*Progressive Disclosure:** Token loads shown are **full skill sizes when activated**. Skills load on-demand via the `Skill` tool when you invoke them (e.g., `/pdf`, `/brainstorming`). Until activated, skills consume minimal tokens as slash command metadata (~3.1k tokens total for all 22 skills). Use `/context` to monitor actual usage.
 
 ---
 
