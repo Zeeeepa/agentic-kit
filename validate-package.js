@@ -170,7 +170,39 @@ function validateInstallerSystem() {
 function validateToolPackages() {
   info('\nValidating tool packages...');
 
-  const tools = ['claude', 'opencode', 'ampcode', 'droid'];
+  // Define tool-specific directory mappings
+  const toolConfigs = {
+    claude: {
+      agents: 'agents',
+      skills: 'skills',
+      resources: 'resources',
+      hooks: 'hooks',
+      hasHooks: true
+    },
+    opencode: {
+      agents: 'agent',
+      skills: 'command',
+      resources: 'resources',
+      hooks: null,
+      hasHooks: false
+    },
+    ampcode: {
+      agents: 'agents',
+      skills: 'commands',
+      resources: 'resources',
+      hooks: null,
+      hasHooks: false
+    },
+    droid: {
+      agents: 'droids',
+      skills: 'commands',
+      resources: 'resources',
+      hooks: null,
+      hasHooks: false
+    }
+  };
+
+  const tools = Object.keys(toolConfigs);
   const packagesDir = './packages';
 
   if (!fileExists(packagesDir)) {
@@ -180,6 +212,7 @@ function validateToolPackages() {
 
   tools.forEach(tool => {
     const toolDir = path.join(packagesDir, tool);
+    const config = toolConfigs[tool];
 
     if (!fileExists(toolDir)) {
       error(`Tool package missing: ${tool}`);
@@ -213,12 +246,23 @@ function validateToolPackages() {
       }
     }
 
-    // Check for core directories
-    const coreDirs = ['agents', 'skills', 'resources', 'hooks'];
-    coreDirs.forEach(dir => {
+    // Check for core directories using tool-specific mapping
+    const coreDirs = [
+      { key: 'agents', dir: config.agents },
+      { key: 'skills', dir: config.skills },
+      { key: 'resources', dir: config.resources }
+    ];
+
+    if (config.hasHooks) {
+      coreDirs.push({ key: 'hooks', dir: config.hooks });
+    }
+
+    coreDirs.forEach(({ key, dir }) => {
       const dirPath = path.join(toolDir, dir);
       if (!fileExists(dirPath)) {
         warn(`${tool}: Missing ${dir}/ directory`);
+      } else {
+        success(`${tool}: ${dir}/ directory exists`);
       }
     });
   });
