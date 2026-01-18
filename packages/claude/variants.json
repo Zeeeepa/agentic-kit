@@ -9,17 +9,31 @@
       "2-generate-tasks",
       "3-process-task-list",
       "master",
-      "context-builder",
-      "docs-builder"
+      "context-builder"
     ],
     "skills": [
-      "docx",
-      "pdf",
-      "code-review",
       "brainstorming",
+      "code-review",
+      "condition-based-waiting",
+      "docs-builder",
       "root-cause-tracing",
-      "mcp-builder",
-      "systematic-debugging"
+      "skill-creator",
+      "subagent-spawning",
+      "systematic-debugging",
+      "test-driven-development",
+      "testing-anti-patterns",
+      "verification-before-completion"
+    ],
+    "commands": [
+      "debug",
+      "explain",
+      "git-commit",
+      "optimize",
+      "refactor",
+      "review",
+      "security",
+      "ship",
+      "test-generate"
     ],
     "resources": "*",
     "hooks": "*"
@@ -39,21 +53,31 @@
       "code-developer",
       "market-researcher",
       "ui-designer",
-      "context-builder",
-      "docs-builder"
+      "context-builder"
     ],
     "skills": [
-      "docx",
-      "pdf",
-      "code-review",
       "brainstorming",
+      "code-review",
+      "condition-based-waiting",
+      "docs-builder",
       "root-cause-tracing",
-      "mcp-builder",
-      "webapp-testing",
-      "xlsx",
+      "skill-creator",
+      "subagent-spawning",
       "systematic-debugging",
-      "verification-before-completion",
-      "skill-creator"
+      "test-driven-development",
+      "testing-anti-patterns",
+      "verification-before-completion"
+    ],
+    "commands": [
+      "debug",
+      "explain",
+      "git-commit",
+      "optimize",
+      "refactor",
+      "review",
+      "security",
+      "ship",
+      "test-generate"
     ],
     "resources": "*",
     "hooks": "*"
@@ -65,6 +89,7 @@
     "targetUsers": "Power users, enterprises, teams requiring comprehensive feature set",
     "agents": "*",
     "skills": "*",
+    "commands": "*",
     "resources": "*",
     "hooks": "*"
   }

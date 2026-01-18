@@ -9,17 +9,29 @@
       "2-generate-tasks",
       "3-process-task-list",
       "master",
-      "context-builder",
-      "docs-builder"
+      "context-builder"
     ],
-    "skills": [
-      "docx",
-      "pdf",
-      "code-review",
+    "commands": [
       "brainstorming",
+      "code-review",
+      "condition-based-waiting",
+      "debug",
+      "docs-builder",
+      "explain",
+      "git-commit",
+      "optimize",
+      "refactor",
+      "review",
       "root-cause-tracing",
-      "mcp-builder",
-      "systematic-debugging"
+      "security",
+      "ship",
+      "skill-creator",
+      "subagent-spawning",
+      "systematic-debugging",
+      "test-driven-development",
+      "test-generate",
+      "testing-anti-patterns",
+      "verification-before-completion"
     ],
     "resources": "*",
     "hooks": "*"
@@ -39,21 +51,29 @@
       "code-developer",
       "market-researcher",
       "ui-designer",
-      "context-builder",
-      "docs-builder"
+      "context-builder"
     ],
-    "skills": [
-      "docx",
-      "pdf",
-      "code-review",
+    "commands": [
       "brainstorming",
+      "code-review",
+      "condition-based-waiting",
+      "debug",
+      "docs-builder",
+      "explain",
+      "git-commit",
+      "optimize",
+      "refactor",
+      "review",
       "root-cause-tracing",
-      "mcp-builder",
-      "webapp-testing",
-      "xlsx",
+      "security",
+      "ship",
+      "skill-creator",
+      "subagent-spawning",
       "systematic-debugging",
-      "verification-before-completion",
-      "skill-creator"
+      "test-driven-development",
+      "test-generate",
+      "testing-anti-patterns",
+      "verification-before-completion"
     ],
     "resources": "*",
     "hooks": "*"
@@ -64,7 +84,7 @@
     "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, debugging, and creative capabilities",
     "targetUsers": "Power users, enterprises, teams requiring comprehensive feature set",
     "agents": "*",
-    "skills": "*",
+    "commands": "*",
     "resources": "*",
     "hooks": "*"
   }
