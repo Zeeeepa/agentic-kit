@@ -174,31 +174,19 @@ function validateToolPackages() {
   const toolConfigs = {
     claude: {
       agents: 'agents',
-      skills: 'skills',
-      resources: 'resources',
-      hooks: 'hooks',
-      hasHooks: true
+      skills: 'skills'
     },
     opencode: {
       agents: 'agent',
-      skills: 'command',
-      resources: 'resources',
-      hooks: null,
-      hasHooks: false
+      skills: 'command'
     },
     ampcode: {
       agents: 'agents',
-      skills: 'commands',
-      resources: 'resources',
-      hooks: null,
-      hasHooks: false
+      skills: 'commands'
     },
     droid: {
       agents: 'droids',
-      skills: 'commands',
-      resources: 'resources',
-      hooks: null,
-      hasHooks: false
+      skills: 'commands'
     }
   };
 
@@ -257,18 +245,13 @@ function validateToolPackages() {
     // Check for core directories using tool-specific mapping
     const coreDirs = [
       { key: 'agents', dir: config.agents },
-      { key: 'skills', dir: config.skills },
-      { key: 'resources', dir: config.resources }
+      { key: 'skills', dir: config.skills }
     ];
-
-    if (config.hasHooks) {
-      coreDirs.push({ key: 'hooks', dir: config.hooks });
-    }
 
     coreDirs.forEach(({ key, dir }) => {
       const dirPath = path.join(toolDir, dir);
       if (!fileExists(dirPath)) {
-        warn(`${tool}: Missing ${dir}/ directory`);
+        error(`${tool}: Missing ${dir}/ directory`);
       } else {
         success(`${tool}: ${dir}/ directory exists`);
       }
