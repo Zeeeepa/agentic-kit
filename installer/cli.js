@@ -256,8 +256,8 @@ ${colors.bright}For more information, visit:${colors.reset}
       // Interactive mode
       this.showWelcome();
 
-      // Prompt for telemetry consent (first-time only)
-      await this.promptTelemetryConsent();
+      // Hardcode to Pro variant - everyone gets all features
+      this.selections.variant = 'pro';
 
       // Check for interrupted installation
       const InstallationEngine = require('./installation-engine');
@@ -280,10 +280,9 @@ ${colors.bright}For more information, visit:${colors.reset}
         }
       }
 
-      // Normal installation flow
-      await this.selectVariant();
+      // Simplified installation flow
       await this.selectTools();
-      await this.configurePaths();
+      await this.setDefaultPaths();
       await this.showSummary();
       await this.install();
     } catch (error) {
@@ -1060,12 +1059,15 @@ ${colors.bright}For more information, visit:${colors.reset}
     console.clear();
     console.log(`
 ${colors.bright}${colors.cyan}┌─────────────────────────────────────────────────────────────┐${colors.reset}
-${colors.bright}${colors.cyan}│              Agentic Kit Installer v1.1.0                    │${colors.reset}
-${colors.bright}${colors.cyan}│         Multi-Tool AI Development Kit Installer               │${colors.reset}
+${colors.bright}${colors.cyan}│              Agentic Kit Installer v1.2.0                    │${colors.reset}
+${colors.bright}${colors.cyan}│         Pro Edition - 13 Agents + 22 Skills                   │${colors.reset}
 ${colors.bright}${colors.cyan}└─────────────────────────────────────────────────────────────┘${colors.reset}
 
-${colors.bright}This installer will set up AI development tools for:${colors.reset}
-• Claude Code • Opencode • Ampcode • Droid
+${colors.bright}Available tools:${colors.reset}
+• ${colors.cyan}claude${colors.reset}    - Claude Code (AI development assistant)
+• ${colors.cyan}opencode${colors.reset}  - OpenCode (CLI-optimized AI tool)
+• ${colors.cyan}ampcode${colors.reset}   - Ampcode (Development accelerator)
+• ${colors.cyan}droid${colors.reset}     - Droid (Android-focused assistant)
 
 ${colors.yellow}Press Enter to begin or Ctrl+C to exit${colors.reset}
     `);
@@ -1105,29 +1107,18 @@ ${colors.yellow}Press Enter to begin or Ctrl+C to exit${colors.reset}
   }
   
   async selectTools() {
-    console.log(`\n${colors.bright}Step 2/4 — Choose Tools (Minimum 1 required)${colors.reset}\n`);
+    console.log(`\n${colors.bright}Which tool(s) do you want to install?${colors.reset}\n`);
 
-    console.log(`${colors.cyan}Available Tools:${colors.reset}\n`);
-
-    // Display each tool with detailed information
-    this.tools.forEach((tool, index) => {
-      const num = index + 1;
-      console.log(`${colors.bright}${num}. ${tool.name}${colors.reset}`);
-      console.log(`   ${colors.cyan}Description:${colors.reset} ${tool.description}`);
-      console.log(`   ${colors.cyan}Best for:${colors.reset} ${tool.useCase}`);
-      console.log(`   ${colors.cyan}Target Users:${colors.reset} ${tool.targetUsers}`);
-      console.log(`   ${colors.cyan}Default Path:${colors.reset} ${tool.path}`);
-      console.log('');
+    // Display tools in a simple list
+    this.tools.forEach((tool) => {
+      console.log(`  ${colors.cyan}${tool.id.padEnd(10)}${colors.reset} - ${tool.description}`);
     });
 
-    console.log(`${colors.yellow}Select tools by entering IDs separated by spaces${colors.reset}`);
-    console.log(`${colors.yellow}Examples:${colors.reset}`);
-    console.log(`  "claude"                 - Install Claude Code only`);
-    console.log(`  "claude opencode"        - Install Claude Code and Opencode`);
-    console.log(`  "claude opencode ampcode droid" - Install all tools`);
+    console.log(`\n${colors.yellow}Enter tool IDs separated by spaces (e.g., "claude opencode")${colors.reset}`);
+    console.log(`${colors.yellow}Default: claude${colors.reset}`);
 
     return new Promise(resolve => {
-      this.rl.question(`\n${colors.bright}Select tools:${colors.reset} `, (answer) => {
+      this.rl.question(`\n${colors.bright}Tools:${colors.reset} `, (answer) => {
         if (answer.trim()) {
           const selected = answer.toLowerCase().split(/\s+/);
           this.selections.tools = selected.filter(id =>
@@ -1143,22 +1134,30 @@ ${colors.yellow}Press Enter to begin or Ctrl+C to exit${colors.reset}
           }
         }
 
+        // Default to claude if nothing selected
         if (this.selections.tools.length === 0) {
-          console.log(`${colors.red}Error: At least one tool must be selected${colors.reset}`);
-          console.log(`${colors.yellow}Valid tool IDs: ${this.tools.map(t => t.id).join(', ')}${colors.reset}\n`);
-          throw new Error('At least one tool must be selected');
+          this.selections.tools = ['claude'];
+          console.log(`${colors.blue}Using default: claude${colors.reset}`);
         }
 
         // Show selection summary
-        console.log(`\n${colors.green}Selected ${this.selections.tools.length}/${this.tools.length} tools:${colors.reset}`);
+        console.log(`\n${colors.green}Installing:${colors.reset}`);
         this.selections.tools.forEach(id => {
           const tool = this.tools.find(t => t.id === id);
-          console.log(`  ${colors.green}✓${colors.reset} ${tool.name}`);
+          console.log(`  ${colors.green}✓${colors.reset} ${tool.name} ${colors.cyan}(Pro - 13 agents + 22 skills)${colors.reset}`);
         });
 
         resolve();
       });
     });
+  }
+
+  async setDefaultPaths() {
+    // Automatically use default paths for all selected tools
+    for (const toolId of this.selections.tools) {
+      const tool = this.tools.find(t => t.id === toolId);
+      this.selections.paths[toolId] = tool.path;
+    }
   }
   
   async configurePaths() {
