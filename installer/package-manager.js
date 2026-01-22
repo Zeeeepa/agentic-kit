@@ -73,10 +73,10 @@ class PackageManager {
     }
 
     // Validate each variant has required fields
-    // Note: 'skills' is optional (some tools only have commands)
+    // Note: 'skills', 'commands', 'resources', 'hooks' are optional
     for (const variant of requiredVariants) {
       const variantConfig = config[variant];
-      const requiredFields = ['name', 'description', 'agents', 'resources', 'hooks'];
+      const requiredFields = ['name', 'description', 'agents'];
 
       for (const field of requiredFields) {
         if (variantConfig[field] === undefined) {
@@ -529,8 +529,8 @@ class PackageManager {
     }
 
     // Check 5: Each variant has required fields
-    // Note: 'skills' is optional (some tools only have commands)
-    const requiredFields = ['name', 'description', 'agents', 'resources', 'hooks'];
+    // Note: 'skills', 'commands', 'resources', 'hooks' are optional
+    const requiredFields = ['name', 'description', 'agents'];
     for (const reqVariant of requiredVariants) {
       const variantConfig = config[reqVariant];
       for (const field of requiredFields) {
