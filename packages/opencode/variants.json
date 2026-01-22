@@ -8,7 +8,6 @@
       "1-create-prd",
       "2-generate-tasks",
       "3-process-task-list",
-      "master",
       "context-builder"
     ],
     "commands": [
@@ -26,15 +25,13 @@
       "security",
       "ship",
       "skill-creator",
-      "subagent-spawning",
+      "stash",
       "systematic-debugging",
       "test-driven-development",
       "test-generate",
       "testing-anti-patterns",
       "verification-before-completion"
-    ],
-    "resources": "*",
-    "hooks": "*"
+    ]
   },
   "standard": {
     "name": "Standard",
@@ -45,7 +42,6 @@
       "1-create-prd",
       "2-generate-tasks",
       "3-process-task-list",
-      "master",
       "orchestrator",
       "quality-assurance",
       "code-developer",
@@ -68,15 +64,13 @@
       "security",
       "ship",
       "skill-creator",
-      "subagent-spawning",
+      "stash",
       "systematic-debugging",
       "test-driven-development",
       "test-generate",
       "testing-anti-patterns",
       "verification-before-completion"
-    ],
-    "resources": "*",
-    "hooks": "*"
+    ]
   },
   "pro": {
     "name": "Pro",
@@ -84,8 +78,6 @@
     "useCase": "Full-featured installation for users needing all AI codegen, document processing, testing, debugging, and creative capabilities",
     "targetUsers": "Power users, enterprises, teams requiring comprehensive feature set",
     "agents": "*",
-    "commands": "*",
-    "resources": "*",
-    "hooks": "*"
+    "commands": "*"
   }
 }

@@ -135,12 +135,13 @@ class PackageManager {
     const selected = {
       agents: [],
       skills: [],
+      commands: [],
       resources: [],
       hooks: []
     };
 
     // Helper function to process each content category
-    const selectItems = (category, variantSelection, availableItems) => {
+    const selectItems = (category, variantSelection, availableItems, skipMissing = false) => {
       // Handle wildcard: "*" expands to all available items
       if (variantSelection === '*') {
         return [...availableItems];
@@ -153,10 +154,14 @@ class PackageManager {
           return [];
         }
 
-        // Specific selection: validate all items exist
+        // Specific selection: validate all items exist (unless skipMissing)
         const selectedItems = [];
         for (const item of variantSelection) {
           if (!availableItems.includes(item)) {
+            if (skipMissing) {
+              // Skip missing items silently (e.g., removed commands like subagent-spawning)
+              continue;
+            }
             throw new Error(
               `Item '${item}' specified in ${variant} variant ${category} not found in available content. ` +
               `Available ${category}: ${availableItems.join(', ')}`
@@ -174,6 +179,7 @@ class PackageManager {
     // Process each content category
     selected.agents = selectItems('agents', variantConfig.agents, availableContent.agents || []);
     selected.skills = selectItems('skills', variantConfig.skills, availableContent.skills || []);
+    selected.commands = selectItems('commands', variantConfig.commands, availableContent.commands || [], true);
     selected.resources = selectItems('resources', variantConfig.resources, availableContent.resources || []);
     selected.hooks = selectItems('hooks', variantConfig.hooks, availableContent.hooks || []);
 
@@ -208,7 +214,7 @@ class PackageManager {
       throw new Error(`Package not found: ${toolId}`);
     }
 
-    // Get all available content from the package
+    // Get all available content from the package (includes dynamic directory names)
     const availableContent = await this.getAvailableContent(packageDir);
 
     // Use selectVariantContent to filter based on variant configuration
@@ -218,14 +224,16 @@ class PackageManager {
     const contents = {
       agents: [],
       skills: [],
+      commands: [],
       resources: [],
       hooks: [],
       totalFiles: 0,
       totalSize: 0
     };
 
-    // Build file paths for selected agents
-    const agentsDir = path.join(packageDir, 'agents');
+    // Build file paths for selected agents (use dynamic directory name)
+    const agentsDirName = availableContent.agentsDir || 'agents';
+    const agentsDir = path.join(packageDir, agentsDirName);
     if (fs.existsSync(agentsDir)) {
       for (const agent of selectedContent.agents) {
         const agentPath = path.join(agentsDir, `${agent}.md`);
@@ -244,6 +252,23 @@ class PackageManager {
           // Store the skill directory path (not individual files within it)
           // The installation engine will handle copying the entire directory
           contents.skills.push(skillPath);
+        }
+      }
+    }
+
+    // Build file paths for selected commands (use dynamic directory name)
+    const commandsDirName = availableContent.commandsDir || 'commands';
+    const commandsDir = path.join(packageDir, commandsDirName);
+    if (fs.existsSync(commandsDir) && selectedContent.commands) {
+      for (const command of selectedContent.commands) {
+        const commandPath = path.join(commandsDir, `${command}.md`);
+        if (fs.existsSync(commandPath)) {
+          contents.commands.push(commandPath);
+        }
+        // Also check for command subdirectories (like docs-builder/templates.md)
+        const commandSubDir = path.join(commandsDir, command);
+        if (fs.existsSync(commandSubDir) && fs.statSync(commandSubDir).isDirectory()) {
+          contents.commands.push(commandSubDir);
         }
       }
     }
@@ -273,6 +298,7 @@ class PackageManager {
     // Calculate total files
     contents.totalFiles = contents.agents.length +
                          contents.skills.length +
+                         contents.commands.length +
                          contents.resources.length +
                          contents.hooks.length;
 
@@ -284,8 +310,8 @@ class PackageManager {
    * Helper method for getPackageContents
    */
   async getAvailableContent(packageDir) {
-    const getItemsInDir = async (dir) => {
-      if (!fs.existsSync(dir)) return [];
+    const getItemsInDir = async (dir, isAgentDir = false) => {
+      if (!fs.existsSync(dir)) return { items: [], dirName: null };
       const items = await fs.promises.readdir(dir);
       const result = [];
 
@@ -295,7 +321,7 @@ class PackageManager {
 
         if (stat.isFile()) {
           // For agents, strip the .md extension
-          if (dir.includes('agents')) {
+          if (isAgentDir) {
             result.push(item.replace('.md', ''));
           } else if (dir.includes('resources') || dir.includes('hooks')) {
             // For resources and hooks, keep the full filename
@@ -308,14 +334,30 @@ class PackageManager {
         }
       }
 
-      return result;
+      return { items: result, dirName: path.basename(dir) };
     };
 
+    // Check for both plural and singular directory names
+    const agentsDir = fs.existsSync(path.join(packageDir, 'agents')) ? 'agents' :
+                      fs.existsSync(path.join(packageDir, 'agent')) ? 'agent' :
+                      fs.existsSync(path.join(packageDir, 'droids')) ? 'droids' : 'agents';
+    const commandsDir = fs.existsSync(path.join(packageDir, 'commands')) ? 'commands' :
+                        fs.existsSync(path.join(packageDir, 'command')) ? 'command' : 'commands';
+
+    const agentsResult = await getItemsInDir(path.join(packageDir, agentsDir), true);
+    const skillsResult = await getItemsInDir(path.join(packageDir, 'skills'));
+    const commandsResult = await getItemsInDir(path.join(packageDir, commandsDir), true);
+    const resourcesResult = await getItemsInDir(path.join(packageDir, 'resources'));
+    const hooksResult = await getItemsInDir(path.join(packageDir, 'hooks'));
+
     return {
-      agents: await getItemsInDir(path.join(packageDir, 'agents')),
-      skills: await getItemsInDir(path.join(packageDir, 'skills')),
-      resources: await getItemsInDir(path.join(packageDir, 'resources')),
-      hooks: await getItemsInDir(path.join(packageDir, 'hooks'))
+      agents: agentsResult.items,
+      agentsDir: agentsDir,
+      skills: skillsResult.items,
+      commands: commandsResult.items,
+      commandsDir: commandsDir,
+      resources: resourcesResult.items,
+      hooks: hooksResult.items
     };
   }
   

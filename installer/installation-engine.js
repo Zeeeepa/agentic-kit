@@ -250,6 +250,38 @@ class InstallationEngine {
       }
     }
 
+    // Collect all command files (for opencode/droid which use commands instead of skills)
+    for (const commandPath of (packageContents.commands || [])) {
+      const stat = await fs.promises.stat(commandPath);
+      if (stat.isDirectory()) {
+        // Command subdirectory (like docs-builder/)
+        const baseRelativePath = path.relative(sourceBase, commandPath);
+        const commandFiles = await collectDirectoryFiles(commandPath, baseRelativePath);
+        for (const file of commandFiles) {
+          filesToCopy.push({
+            sourcePath: file.sourcePath,
+            relativePath: file.relativePath,
+            size: file.size,
+            type: 'command'
+          });
+          totalFiles++;
+          totalBytes += file.size;
+        }
+      } else {
+        // Single command file
+        const relativePath = path.relative(sourceBase, commandPath);
+        const size = await getFileSize(commandPath);
+        filesToCopy.push({
+          sourcePath: commandPath,
+          relativePath: relativePath,
+          size: size,
+          type: 'command'
+        });
+        totalFiles++;
+        totalBytes += size;
+      }
+    }
+
     // Collect all resource files
     for (const resourcePath of packageContents.resources) {
       const relativePath = path.relative(sourceBase, resourcePath);
