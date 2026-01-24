@@ -557,7 +557,7 @@ npm install -g agentic-toolkit
 
 1. **Check which files are loaded:**
    ```bash
-   du -sh agentic-kit/
+   du -sh liteagents/
    du -sh skills/
    ```
 
@@ -756,7 +756,7 @@ A: Just refresh Claude (F5). Usually no computer restart needed.
 **Q: Where are files stored?**
 A: Depends on installation method:
 - npm: `node_modules/agentic-toolkit/`
-- Development: `/path/to/agentic-kit/`
+- Development: `/path/to/liteagents/`
 
 **Q: Can I use multiple variants at once?**
 A: No, only one variant at a time. Reinstall to switch.

@@ -83,8 +83,8 @@ git push origin main --tags
 ./publish.sh
 
 # 5. Verify
-# - npm.js: https://www.npmjs.com/package/@amrhas82/agentic-kit
-# - GitHub: https://github.com/amrhas82/agentic-kit/packages
+# - npm.js: https://www.npmjs.com/package/liteagents
+# - GitHub: https://github.com/amrhas82/liteagents/packages
 ```
 
 ---

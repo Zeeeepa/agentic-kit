@@ -7,11 +7,11 @@
  * It handles variant selection and provides helpful CLI output for users.
  *
  * Usage:
- *   npx @amrhas82/agentic-kit              # Install standard variant (default)
- *   npx @amrhas82/agentic-kit --variant=lite   # Install lite variant via flag
- *   npx @amrhas82/agentic-kit --variant=pro    # Install pro variant via flag
+ *   npx liteagents              # Install standard variant (default)
+ *   npx liteagents --variant=lite   # Install lite variant via flag
+ *   npx liteagents --variant=pro    # Install pro variant via flag
  *   npx agkit                              # Shorter alias
- *   npx @amrhas82/agentic-kit --help       # Show help message
+ *   npx liteagents --help       # Show help message
  */
 
 const fs = require('fs');
@@ -51,9 +51,9 @@ ${colors.bright}VARIANTS:${colors.reset}
   ${colors.magenta}pro${colors.reset}         13 agents, 14 skills - Maximum capabilities
 
 ${colors.bright}USAGE:${colors.reset}
-  ${colors.cyan}npx @amrhas82/agentic-kit${colors.reset}                # Install standard variant (default)
-  ${colors.cyan}npx @amrhas82/agentic-kit --variant=lite${colors.reset} # Install lite variant via flag
-  ${colors.cyan}npx @amrhas82/agentic-kit --variant=pro${colors.reset}  # Install pro variant via flag
+  ${colors.cyan}npx liteagents${colors.reset}                # Install standard variant (default)
+  ${colors.cyan}npx liteagents --variant=lite${colors.reset} # Install lite variant via flag
+  ${colors.cyan}npx liteagents --variant=pro${colors.reset}  # Install pro variant via flag
   ${colors.cyan}npx agkit${colors.reset}                                # Shorter alias
 
 ${colors.bright}CLAUDE CODE MARKETPLACE:${colors.reset}

@@ -8,7 +8,7 @@ This document describes the transformation of 22 Claude skills from `~/.factory/
 
 **Original Location**: `~/.factory/commands/`  
 **Total Skills Transformed**: 22  
-**Output Location**: `/home/hamr/PycharmProjects/agentic-kit/commands/`
+**Output Location**: `/home/hamr/PycharmProjects/liteagents/commands/`
 
 ## Conversion Process
 

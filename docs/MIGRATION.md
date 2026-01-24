@@ -304,7 +304,7 @@ rm -rf ~/.claude
 cp -r ~/.claude.backup ~/.claude
 
 # Reinstall old version
-npm install -g @amrhas82/agentic-kit@1.1.0
+npm install -g liteagents@1.1.0
 ```
 
 ## Migration Checklist
@@ -365,7 +365,7 @@ After migrating, verify:
 If you encounter issues during migration:
 
 1. **Check Documentation**: Review this guide and INSTALLER_GUIDE.md
-2. **GitHub Issues**: https://github.com/amrhas82/agentic-kit/issues
+2. **GitHub Issues**: https://github.com/amrhas82/liteagents/issues
 3. **Debug Mode**: Run with `DEBUG=* node installer/cli.js`
 4. **Manual Migration**: Follow manual migration steps above
 

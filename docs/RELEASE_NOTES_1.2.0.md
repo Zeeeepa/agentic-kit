@@ -24,7 +24,7 @@ The headline feature of v1.2.0 is a complete installation system supporting four
 
 #### 📊 Installation Reporting (New in Phase 9)
 
-- **Comprehensive Reports**: Detailed installation reports saved to `~/.agentic-kit-install.log`
+- **Comprehensive Reports**: Detailed installation reports saved to `~/.liteagents-install.log`
   - Success/failure status
   - Per-tool component counts and verification
   - System information and timing data
@@ -93,41 +93,41 @@ The headline feature of v1.2.0 is a complete installation system supporting four
 
 ```bash
 # Install globally
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 
 # Run interactive installer
-agentic-kit install
+liteagents install
 ```
 
 ### Silent Mode (CI/CD)
 
 ```bash
 # Install Claude with Standard variant
-agentic-kit install --silent --variant=standard --tools=claude
+liteagents install --silent --variant=standard --tools=claude
 
 # Install all tools with Pro variant
-agentic-kit install --silent --variant=pro --tools=claude,opencode,ampcode,droid
+liteagents install --silent --variant=pro --tools=claude,opencode,ampcode,droid
 ```
 
 ### Advanced Usage
 
 ```bash
 # Custom path
-agentic-kit install --variant=standard --tools=claude --path claude=~/my-custom-path
+liteagents install --variant=standard --tools=claude --path claude=~/my-custom-path
 
 # Multiple tools with different paths
-agentic-kit install --variant=pro --tools=claude,opencode \
+liteagents install --variant=pro --tools=claude,opencode \
   --path claude=~/.claude-custom \
   --path opencode=~/.opencode-custom
 
 # Disable telemetry
-agentic-kit install --no-telemetry
+liteagents install --no-telemetry
 
 # Uninstall
-agentic-kit install --uninstall claude
+liteagents install --uninstall claude
 
 # Upgrade variant
-agentic-kit install --upgrade claude pro
+liteagents install --upgrade claude pro
 ```
 
 ---
@@ -177,7 +177,7 @@ agentic-kit install --upgrade claude pro
 ### Architecture
 
 ```
-agentic-kit/
+liteagents/
 ├── installer/
 │   ├── cli.js                    # Interactive CLI
 │   ├── package-manager.js        # Variant management
@@ -226,7 +226,7 @@ agentic-kit/
 When you run the installer, it will automatically detect v1.1.x installations and offer to migrate:
 
 ```bash
-$ agentic-kit install
+$ liteagents install
 
 ⚠ Legacy installation detected at ~/.claude
   Found: 13 agents, 5 skills, 1 resource, 2 hooks
@@ -300,8 +300,8 @@ This release represents a significant milestone in making Agentic Kit more acces
 
 ## 📞 Support
 
-- **Documentation**: https://github.com/amrhas82/agentic-kit/docs
-- **Issues**: https://github.com/amrhas82/agentic-kit/issues
+- **Documentation**: https://github.com/amrhas82/liteagents/docs
+- **Issues**: https://github.com/amrhas82/liteagents/issues
 - **Security**: See [SECURITY.md](docs/SECURITY.md) for vulnerability reporting
 
 ---

@@ -10,12 +10,12 @@ This document explains **where** Agentic Kit files get installed depending on th
 
 **Command:**
 ```bash
-/plugin add github:amrhas82/agentic-kit
+/plugin add github:amrhas82/liteagents
 ```
 
 **Install Location:**
 ```
-~/.config/claude-code/plugins/github-amrhas82-agentic-kit/
+~/.config/claude-code/plugins/github-amrhas82-liteagents/
 ```
 
 **What's Installed:**
@@ -30,7 +30,7 @@ This document explains **where** Agentic Kit files get installed depending on th
 
 **Verify Installation:**
 ```bash
-ls ~/.config/claude-code/plugins/ | grep agentic-kit
+ls ~/.config/claude-code/plugins/ | grep liteagents
 ```
 
 ---
@@ -39,13 +39,13 @@ ls ~/.config/claude-code/plugins/ | grep agentic-kit
 
 **Command:**
 ```bash
-npx @amrhas82/agentic-kit
+npx liteagents
 npx agkit --variant=lite
 ```
 
 **Install Location:**
 ```
-~/.npm/_npx/[hash]/@amrhas82/agentic-kit/
+~/.npm/_npx/[hash]/liteagents/
 ```
 
 **What's Installed:**
@@ -75,12 +75,12 @@ npx is designed for:
 
 **Command:**
 ```bash
-npm install @amrhas82/agentic-kit
+npm install liteagents
 ```
 
 **Install Location:**
 ```
-./node_modules/@amrhas82/agentic-kit/
+./node_modules/liteagents/
 ```
 
 **What's Installed:**
@@ -107,19 +107,19 @@ npm install @amrhas82/agentic-kit
 
 **Command:**
 ```bash
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 ```
 
 **Install Location:**
 ```
 # Linux/macOS
-/usr/local/lib/node_modules/@amrhas82/agentic-kit/
+/usr/local/lib/node_modules/liteagents/
 
 # Or with nvm
-~/.nvm/versions/node/vX.X.X/lib/node_modules/@amrhas82/agentic-kit/
+~/.nvm/versions/node/vX.X.X/lib/node_modules/liteagents/
 
 # Windows
-%AppData%\npm\node_modules\@amrhas82\agentic-kit\
+%AppData%\npm\node_modules\liteagents\
 ```
 
 **What's Installed:**
@@ -130,7 +130,7 @@ npm install -g @amrhas82/agentic-kit
 **How it Works:**
 - Downloads package from npm registry
 - Installs globally
-- Adds `agentic-kit` and `agkit` commands to PATH
+- Adds `liteagents` and `agkit` commands to PATH
 
 **When to Use:**
 - Want CLI commands available globally
@@ -154,7 +154,7 @@ npm install -g @amrhas82/agentic-kit
 When installed, you get:
 
 ```
-agentic-kit/
+liteagents/
 ├── .claude-plugin/           # Plugin manifests
 │   ├── plugin.json           # Main manifest
 │   ├── plugin-lite.json      # Lite variant
@@ -200,16 +200,16 @@ rm -rf ~/.npm/_npx
 ### npm Local
 ```bash
 # Check local installation
-ls node_modules/@amrhas82/agentic-kit/
+ls node_modules/liteagents/
 
 # Or use npm
-npm list @amrhas82/agentic-kit
+npm list liteagents
 ```
 
 ### npm Global
 ```bash
 # Find global installation
-npm list -g @amrhas82/agentic-kit
+npm list -g liteagents
 
 # Or check directory
 npm root -g
@@ -221,17 +221,17 @@ npm root -g
 
 ### Claude Code Plugin
 ```bash
-/plugin remove github-amrhas82-agentic-kit
+/plugin remove github-amrhas82-liteagents
 ```
 
 ### npm Local
 ```bash
-npm uninstall @amrhas82/agentic-kit
+npm uninstall liteagents
 ```
 
 ### npm Global
 ```bash
-npm uninstall -g @amrhas82/agentic-kit
+npm uninstall -g liteagents
 ```
 
 ### npx Cache
@@ -249,32 +249,22 @@ When you publish:
 
 ### npm.js Registry
 ```
-https://www.npmjs.com/package/@amrhas82/agentic-kit
+https://www.npmjs.com/package/liteagents
 ```
 
 Users download from:
 ```
-https://registry.npmjs.org/@amrhas82/agentic-kit/-/agentic-kit-1.1.0.tgz
-```
-
-### GitHub Packages
-```
-https://github.com/amrhas82/agentic-kit/packages
-```
-
-Users download from:
-```
-https://npm.pkg.github.com/@amrhas82/agentic-kit
+https://registry.npmjs.org/liteagents/-/liteagents-1.1.0.tgz
 ```
 
 ### GitHub Repository
 ```
-https://github.com/amrhas82/agentic-kit
+https://github.com/amrhas82/liteagents
 ```
 
 Claude Code clones from:
 ```
-git clone https://github.com/amrhas82/agentic-kit.git
+git clone https://github.com/amrhas82/liteagents.git
 ```
 
 ---

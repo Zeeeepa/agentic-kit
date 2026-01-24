@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Agentic Kit will be documented in this file.
+All notable changes to liteagents will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -14,6 +14,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional skills for data analysis
 - Enhanced testing capabilities
 - Performance optimizations
+
+---
+
+## [2.4.1] - 2026-01-24
+
+### Changed - Package Rebranding
+- **BREAKING:** Package renamed from `@amrhas82/agentic-kit` to `liteagents` (unscoped)
+  - Better reflects lightweight, CLI-focused nature
+  - Easier installation: `npm install -g liteagents`
+  - Commands: `liteagents` and `liteag` (shorthand)
+- **Repository:** Renamed from `agentic-kit` to `liteagents` on GitHub
+  - New URL: https://github.com/amrhas82/liteagents
+  - Old URLs redirect automatically
+
+### Removed
+- GitHub Packages support completely removed
+  - No GitHub Packages were published (0 downloads)
+  - Simplified to npm-only publishing
+  - Removed `.npmrc`, `GITHUB_SETUP.md`, `GITHUB_PACKAGES.md`, `DUAL_PUBLISH_SUMMARY.md`
+  - Removed `publish:github` and `publish:both` npm scripts
+
+### Updated
+- All documentation updated to reference `liteagents`
+  - Updated 9 docs files and all root files
+  - README: New "LITEAGENTS" ASCII logo
+  - All npm badges and links updated
+- Publishing workflow simplified
+  - `scripts/publish.sh` reduced from 195 to 69 lines
+  - Now npm-only, no GitHub token management needed
+  - `docs/PUBLISHING.md` simplified to focus on npm
+
+### Migration Guide
+For users of `@amrhas82/agentic-kit`:
+```bash
+# Uninstall old package
+npm uninstall -g @amrhas82/agentic-kit
+
+# Install new package
+npm install -g liteagents
+
+# Use new commands
+liteagents  # or 'liteag' for shorthand
+```
+
+Old package `@amrhas82/agentic-kit` will be deprecated with migration message.
 
 ---
 
@@ -108,7 +153,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Detailed per-tool information (components, paths, verification status)
   - System information (Node.js version, platform, architecture)
   - Errors and warnings sections
-  - Reports saved to `~/.agentic-kit-install.log`
+  - Reports saved to `~/.liteagents-install.log`
 - `installer/telemetry.js` - Anonymous usage statistics (opt-in only)
   - User consent prompt with clear data collection policy
   - `--no-telemetry` flag to disable telemetry
@@ -288,7 +333,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Skill count - Corrected Pro variant from 16 to 14 skills
-- Repository URLs - Updated to `github.com/amrhas82/agentic-kit`
+- Repository URLs - Updated to `github.com/amrhas82/liteagents`
 - Author info - Updated to `amrhas82 <avoidaccess@msn.com>`
 - All variant manifests - Added session-start hook
 
@@ -307,10 +352,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 3 variants: Lite (3 agents), Standard (13 agents, 8 skills), Pro (13 agents, 14 skills)
 
 **Distribution:**
-- npm package: `@amrhas82/agentic-kit`
-- GitHub: `github.com/amrhas82/agentic-kit`
-- Direct install: `/plugin add github:amrhas82/agentic-kit`
-- npx support: `npx @amrhas82/agentic-kit` or `npx agkit`
+- npm package: `liteagents`
+- GitHub: `github.com/amrhas82/liteagents`
+- Direct install: `/plugin add github:amrhas82/liteagents`
+- npx support: `npx liteagents` or `npx agkit`
 
 **Infrastructure:**
 - Plugin manifests for each variant
@@ -339,10 +384,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **To Upgrade:**
 ```bash
 # Via npm
-npm install -g @amrhas82/agentic-kit@latest
+npm install -g liteagents@latest
 
 # Run installer
-agentic-kit
+liteagents
 ```
 
 ---
@@ -361,23 +406,23 @@ agentic-kit
 
 **Action Required:**
 - None for existing installations - upgrade is seamless
-- **New users**: Use interactive installer (`npm install -g @amrhas82/agentic-kit && agentic-kit install`)
+- **New users**: Use interactive installer (`npm install -g liteagents && liteagents install`)
 - **Existing users**: Continue using existing installation methods
 
 **To Upgrade:**
 ```bash
 # Via GitHub
-/plugin update github:amrhas82/agentic-kit
+/plugin update github:amrhas82/liteagents
 
 # Via npm
-npm update @amrhas82/agentic-kit
+npm update liteagents
 
 # Via npx (always latest)
-npx @amrhas82/agentic-kit
+npx liteagents
 
 # New: Interactive installer
-npm install -g @amrhas82/agentic-kit
-agentic-kit install
+npm install -g liteagents
+liteagents install
 ```
 
 **What's Different:**
@@ -403,13 +448,13 @@ agentic-kit install
 **To Upgrade:**
 ```bash
 # Via GitHub
-/plugin update github:amrhas82/agentic-kit
+/plugin update github:amrhas82/liteagents
 
 # Via npm
-npm update @amrhas82/agentic-kit
+npm update liteagents
 
 # Via npx (always latest)
-npx @amrhas82/agentic-kit
+npx liteagents
 ```
 
 ---
@@ -430,10 +475,10 @@ npx @amrhas82/agentic-kit
 
 ## Links
 
-- **GitHub**: https://github.com/amrhas82/agentic-kit
-- **npm**: https://www.npmjs.com/package/@amrhas82/agentic-kit
-- **Issues**: https://github.com/amrhas82/agentic-kit/issues
-- **Releases**: https://github.com/amrhas82/agentic-kit/releases
+- **GitHub**: https://github.com/amrhas82/liteagents
+- **npm**: https://www.npmjs.com/package/liteagents
+- **Issues**: https://github.com/amrhas82/liteagents/issues
+- **Releases**: https://github.com/amrhas82/liteagents/releases
 
 ---
 

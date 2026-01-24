@@ -554,4 +554,4 @@ When creating packages for other tools (Opencode, Ampcode, Droid):
 - Comprehensive document processing
 - Developer-focused skills
 
-This baseline serves as the foundation for creating consistent, high-quality packages across all agentic-kit tools.
+This baseline serves as the foundation for creating consistent, high-quality packages across all liteagents tools.

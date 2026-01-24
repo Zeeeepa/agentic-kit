@@ -16,7 +16,7 @@ Agentic Kit respects your privacy. This document explains our optional telemetry
 When you first run the Agentic Kit installer, you'll be asked:
 
 ```
-Would you like to share anonymous usage statistics to help improve agentic-kit? (y/N)
+Would you like to share anonymous usage statistics to help improve liteagents? (y/N)
 ```
 
 - **Default is NO**: If you just press Enter, telemetry is disabled
@@ -39,7 +39,7 @@ When you **opt-in**, we collect the following anonymous data:
 ### System Information
 - **Operating system type**: Platform name (e.g., linux, darwin, win32)
 - **Node.js version**: The version of Node.js you're using
-- **Agentic Kit version**: The version of agentic-kit you installed
+- **Agentic Kit version**: The version of liteagents you installed
 
 ### Upgrade Events
 - **From variant**: The variant you upgraded from
@@ -67,7 +67,7 @@ We explicitly **do not** collect:
 Currently, telemetry data is stored locally on your machine at:
 
 ```
-~/.agentic-kit-telemetry.log
+~/.liteagents-telemetry.log
 ```
 
 In future versions, with your consent, this data may be sent to a secure analytics endpoint to help aggregate usage patterns. Any such change will:
@@ -82,7 +82,7 @@ In future versions, with your consent, this data may be sent to a secure analyti
 
 Your telemetry consent is stored in:
 ```
-~/.agentic-kit-config.json
+~/.liteagents-config.json
 ```
 
 You can view this file to see your current setting:
@@ -98,7 +98,7 @@ You can view this file to see your current setting:
 You have several options to disable telemetry:
 
 #### Option 1: Edit Config File
-Edit `~/.agentic-kit-config.json` and set:
+Edit `~/.liteagents-config.json` and set:
 ```json
 {
   "telemetry": false
@@ -119,7 +119,7 @@ This flag:
 #### Option 3: Delete Config File
 Remove the config file completely:
 ```bash
-rm ~/.agentic-kit-config.json
+rm ~/.liteagents-config.json
 ```
 
 You'll be prompted again on next installation.
@@ -128,19 +128,19 @@ You'll be prompted again on next installation.
 
 To enable telemetry after previously declining:
 
-1. Edit `~/.agentic-kit-config.json` and set `"telemetry": true`
+1. Edit `~/.liteagents-config.json` and set `"telemetry": true`
 2. Or delete the config file and run installer again to be re-prompted
 
 ## View Collected Data
 
 All locally collected telemetry is stored in plaintext at:
 ```
-~/.agentic-kit-telemetry.log
+~/.liteagents-telemetry.log
 ```
 
 You can view this file anytime to see exactly what data has been collected:
 ```bash
-cat ~/.agentic-kit-telemetry.log
+cat ~/.liteagents-telemetry.log
 ```
 
 Each entry is a JSON object on a single line, for example:
@@ -153,8 +153,8 @@ Each entry is a JSON object on a single line, for example:
 To completely remove all telemetry data from your system:
 
 ```bash
-rm ~/.agentic-kit-telemetry.log
-rm ~/.agentic-kit-config.json
+rm ~/.liteagents-telemetry.log
+rm ~/.liteagents-config.json
 ```
 
 This removes:
@@ -176,7 +176,7 @@ Anonymous usage statistics help us:
 
 If you have questions about our privacy policy or data collection:
 
-- **GitHub Issues**: https://github.com/amrhas82/agentic-kit/issues
+- **GitHub Issues**: https://github.com/amrhas82/liteagents/issues
 - **Review Code**: Our telemetry code is open source in `installer/telemetry.js`
 - **Request Clarification**: Open an issue if anything is unclear
 

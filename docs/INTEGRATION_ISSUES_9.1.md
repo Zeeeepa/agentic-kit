@@ -193,7 +193,7 @@ Our installer adds:
 
 ### **Recommendation** (for future consideration)
 1. Consider alternative installation path like `~/.claude-code` or `~/.claude/packages`
-2. Or add namespace: `~/.claude/agentic-kit/`
+2. Or add namespace: `~/.claude/liteagents/`
 3. Document the shared directory usage
 4. Add detection logic to warn if files conflict
 5. Update PRD to clarify installation path strategy

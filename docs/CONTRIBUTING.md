@@ -28,7 +28,7 @@ How to contribute to the Agentic Toolkit by adding custom agents, skills, and im
 ```bash
 # Clone repository
 git clone https://github.com/anthropic/agentic-toolkit.git
-cd agentic-kit
+cd liteagents
 
 # Install dependencies (if any)
 npm install
@@ -582,7 +582,7 @@ npm run validate:manifest
 1. **Fork Repository:**
    ```bash
    git clone https://github.com/anthropic/agentic-toolkit.git
-   cd agentic-kit
+   cd liteagents
    git checkout -b feature/your-feature-name
    ```
 

@@ -443,7 +443,7 @@ echo "Exit code: $?"
 
 2. **Review installation log:**
 ```bash
-cat ~/.agentic-kit-install.log
+cat ~/.liteagents-install.log
 ```
 
 3. **Test without silent mode first:**
@@ -463,10 +463,10 @@ node -e "console.log(JSON.parse(require('fs').readFileSync('config.json', 'utf8'
 If you encounter issues:
 
 1. Check this guide for common scenarios
-2. Review the installation log at `~/.agentic-kit-install.log`
+2. Review the installation log at `~/.liteagents-install.log`
 3. Run with `--help` to see all available options
 4. Try interactive mode first to diagnose issues
-5. Report issues at: https://github.com/amrhas82/agentic-kit/issues
+5. Report issues at: https://github.com/amrhas82/liteagents/issues
 
 ## Best Practices
 
@@ -488,7 +488,7 @@ set -e  # Exit on error
 # Configuration
 VARIANT="${AGENTIC_KIT_VARIANT:-lite}"
 TOOLS="${AGENTIC_KIT_TOOLS:-claude}"
-INSTALL_PATH="${AGENTIC_KIT_PATH:-/opt/agentic-kit}"
+INSTALL_PATH="${AGENTIC_KIT_PATH:-/opt/liteagents}"
 
 # Run installation
 echo "Installing Agentic Kit ($VARIANT variant, tools: $TOOLS)..."

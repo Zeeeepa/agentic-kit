@@ -6,11 +6,11 @@ const os = require('os');
  * Report Template Generator
  *
  * Generates detailed installation reports with summary and per-tool details.
- * Reports are saved to ~/.agentic-kit-install.log after each installation.
+ * Reports are saved to ~/.liteagents-install.log after each installation.
  */
 class ReportTemplate {
   constructor() {
-    this.reportPath = path.join(os.homedir(), '.agentic-kit-install.log');
+    this.reportPath = path.join(os.homedir(), '.liteagents-install.log');
   }
 
   /**
@@ -268,7 +268,7 @@ WARNINGS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 For support and documentation, visit:
-https://github.com/amrhas82/agentic-kit
+https://github.com/amrhas82/liteagents
 
 Report saved to: ${this.reportPath}
 

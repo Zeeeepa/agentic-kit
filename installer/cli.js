@@ -369,7 +369,7 @@ class InteractiveInstaller {
       return {
         type: 'Missing Package Error',
         advice: [
-          'Run: npm install -g @amrhas82/agentic-kit',
+          'Run: npm install -g liteagents',
           'Check: packages directory exists'
         ],
         technicalDetails: `Missing file or package validation failed`
@@ -418,7 +418,7 @@ class InteractiveInstaller {
       type: 'Unknown Error',
       advice: [
         'Try running installer again',
-        'Report at: https://github.com/amrhas82/agentic-kit/issues'
+        'Report at: https://github.com/amrhas82/liteagents/issues'
       ],
       technicalDetails: error.stack ? error.stack.split('\n')[1] : 'No additional details'
     };
@@ -726,7 +726,7 @@ ${colors.bright}v2.4.0 | 11 agents + 20 commands per tool${colors.reset}
    * @param {string} toolName - Display name of the tool
    */
   /**
-   * Generate and save installation report to ~/.agentic-kit-install.log
+   * Generate and save installation report to ~/.liteagents-install.log
    * Creates a detailed log of the installation session
    *
    * @param {array} successfulInstalls - Array of successful installation objects

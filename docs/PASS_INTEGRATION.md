@@ -112,7 +112,7 @@ source ~/.bashrc  # or source ~/.zshrc
 ### Simple Workflow (Automatic)
 
 ```bash
-cd /home/hamr/PycharmProjects/agentic-kit
+cd /home/hamr/PycharmProjects/liteagents
 
 # The script automatically retrieves from pass
 ./publish.sh

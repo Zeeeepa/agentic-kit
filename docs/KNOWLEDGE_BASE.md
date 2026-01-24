@@ -568,8 +568,8 @@ Create your own marketplace catalog:
   "name": "My Custom Marketplace",
   "plugins": [
     {
-      "name": "agentic-kit-standard",
-      "source": "github:amrhas82/agentic-kit"
+      "name": "liteagents-standard",
+      "source": "github:amrhas82/liteagents"
     }
   ]
 }
@@ -580,8 +580,8 @@ Create your own marketplace catalog:
 Clone and link for development:
 
 ```bash
-git clone https://github.com/amrhas82/agentic-kit.git
-cd agentic-kit
+git clone https://github.com/amrhas82/liteagents.git
+cd liteagents
 npm link
 ```
 
@@ -694,7 +694,7 @@ A: Yes! The `session-start` hook loads skills automatically.
 A: Yes! Add markdown files to `agents/` and update the manifest.
 
 **Q: How do I update to the latest version?**
-A: `npm update @amrhas82/agentic-kit` or reinstall via Claude Code.
+A: `npm update liteagents` or reinstall via Claude Code.
 
 **Q: Is there a Pro trial?**
 A: All variants are free and open-source. Install Pro to try it.
@@ -709,9 +709,9 @@ A: Agents are AI assistants with roles. Skills are executable tools agents can u
 
 ## Resources
 
-- **GitHub:** https://github.com/amrhas82/agentic-kit
-- **npm:** https://www.npmjs.com/package/@amrhas82/agentic-kit
-- **Issues:** https://github.com/amrhas82/agentic-kit/issues
+- **GitHub:** https://github.com/amrhas82/liteagents
+- **npm:** https://www.npmjs.com/package/liteagents
+- **Issues:** https://github.com/amrhas82/liteagents/issues
 - **Detailed Docs:**
   - [AGENTS.md](AGENTS.md) - Complete agent directory
   - [SKILLS.md](SKILLS.md) - Complete skill reference

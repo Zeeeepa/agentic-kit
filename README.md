@@ -1,19 +1,19 @@
 <div align="center">
 
 ```
-          █████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗ ██████╗    ██╗  ██╗██╗████████╗
-         ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║██╔════╝    ██║ ██╔╝██║╚══██╔══╝
-         ███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   ██║██║         █████╔╝ ██║   ██║
-         ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██║██║         ██╔═██╗ ██║   ██║
-         ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║╚██████╗    ██║  ██╗██║   ██║
-         ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝ ╚═════╝    ╚═╝  ╚═╝╚═╝   ╚═╝
+         ██╗     ██╗████████╗███████╗ █████╗  ██████╗ ███████╗███╗   ██╗████████╗███████╗
+         ██║     ██║╚══██╔══╝██╔════╝██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██╔════╝
+         ██║     ██║   ██║   █████╗  ███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   ███████╗
+         ██║     ██║   ██║   ██╔══╝  ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ╚════██║
+         ███████╗██║   ██║   ███████╗██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ███████║
+         ╚══════╝╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 ```
 
 **AI development toolkit with 11 specialized agents and 20 commands per tool**
 
 </div>
 
-[![npm version](https://img.shields.io/npm/v/@amrhas82/agentic-kit)](https://www.npmjs.com/package/@amrhas82/agentic-kit)
+[![npm version](https://img.shields.io/npm/v/liteagents)](https://www.npmjs.com/package/liteagents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Supported Tools:**
@@ -30,10 +30,10 @@ Specialized AI agents and workflow commands for product management, agile develo
 
 ```bash
 # Install
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 
 # Run installer
-agentic-kit
+liteagents
 
 # Choose tool(s): claude, opencode, ampcode, or droid
 # Each tool gets 11 agents + 20 commands
@@ -47,8 +47,8 @@ agentic-kit
 - **Droid** - 11 agent references + 20 commands
 
 **Key Difference:**
-- **Claude Code / Ampcode**: Full subagent system with orchestrator + skills (auto-triggering)
-- **Opencode / Droid**: Commands only + agent reference documentation
+- **Claude Code**: Full subagent system with orchestrator + skills (auto-triggering)
+- **Opencode / Droid / Ampcode**: Commands only + agent reference documentation
 
 ### Start Using
 
@@ -164,9 +164,9 @@ agentic-kit
 
 ## 🔗 Links
 
-- **npm:** https://www.npmjs.com/package/@amrhas82/agentic-kit
-- **GitHub:** https://github.com/amrhas82/agentic-kit
-- **Issues:** https://github.com/amrhas82/agentic-kit/issues
+- **npm:** https://www.npmjs.com/package/liteagents
+- **GitHub:** https://github.com/amrhas82/liteagents
+- **Issues:** https://github.com/amrhas82/liteagents/issues
 
 ---
 
@@ -176,4 +176,4 @@ MIT © 2025 amrhas82
 
 ---
 
-**Need help?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or [open an issue](https://github.com/amrhas82/agentic-kit/issues)
+**Need help?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) or [open an issue](https://github.com/amrhas82/liteagents/issues)

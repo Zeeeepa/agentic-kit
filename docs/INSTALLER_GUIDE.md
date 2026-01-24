@@ -34,10 +34,10 @@ A comprehensive guide to installing and managing Agentic Kit tools using the int
 
 ```bash
 # Install Agentic Kit globally
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 
 # Run the interactive installer
-agentic-kit install
+liteagents install
 ```
 
 The installer will guide you through 4 simple steps:
@@ -53,7 +53,7 @@ The installer will guide you through 4 simple steps:
 ### Step 1: Launch the Installer
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 You'll see the welcome screen:
@@ -333,7 +333,7 @@ You can easily upgrade from Lite → Standard → Pro:
 
 ```bash
 # Upgrade to a different variant
-agentic-kit install
+liteagents install
 
 # Select the new variant when prompted
 # The installer will detect existing installation and upgrade
@@ -454,11 +454,11 @@ You can install multiple tools simultaneously. Each tool is completely isolated 
 
 ```bash
 # Example: Install Claude and Opencode
-agentic-kit install
+liteagents install
 # Select tools: 1,2
 
 # Example: Install all tools
-agentic-kit install
+liteagents install
 # Select tools: all
 ```
 
@@ -494,12 +494,12 @@ When you choose to customize paths, the installer will:
 1. **Prompt for Path**:
 ```
 Enter custom path for Claude (or press Enter for default):
-> /opt/agentic-kit/claude
+> /opt/liteagents/claude
 ```
 
 2. **Validate Path**:
 ```
-Validating path: /opt/agentic-kit/claude
+Validating path: /opt/liteagents/claude
 
   ✓ Path is absolute
   ✓ Parent directory exists
@@ -515,7 +515,7 @@ Validating path: /opt/agentic-kit/claude
 ╚═══════════════════════════════════════════════╝
 
 Tool: Claude
-Proposed Path: /opt/agentic-kit/claude
+Proposed Path: /opt/liteagents/claude
 Default Path:  /home/user/.claude/
 
 This is different from the default path.
@@ -561,10 +561,10 @@ The installer validates paths for safety and compatibility:
 /opt/team/ai-tools/claude/
 
 # External drive
-/mnt/external/agentic-kit/claude/
+/mnt/external/liteagents/claude/
 
 # With tilde expansion
-~/.config/agentic-kit/claude/
+~/.config/liteagents/claude/
 ```
 
 **Invalid Paths**:
@@ -615,7 +615,7 @@ Configure Paths:
 **Goal**: Install Claude with recommended settings for general development
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -634,7 +634,7 @@ agentic-kit install
 **Goal**: Quick setup with minimal disk usage
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -653,7 +653,7 @@ agentic-kit install
 **Goal**: Install Claude and Opencode for different workflows
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -672,7 +672,7 @@ agentic-kit install
 **Goal**: Install to shared directory for team access
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -696,7 +696,7 @@ agentic-kit install
 **Goal**: Automated installation for CI/CD or scripts
 
 ```bash
-agentic-kit install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
+liteagents install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
 ```
 
 **Result**:
@@ -709,7 +709,7 @@ agentic-kit install --silent --variant=standard --tools=claude --path claude=/op
 **Goal**: Upgrade existing Lite installation to Pro
 
 ```bash
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -730,7 +730,7 @@ agentic-kit install
 
 ```bash
 cd /home/user/projects/my-app
-agentic-kit install
+liteagents install
 ```
 
 **Selections**:
@@ -761,7 +761,7 @@ Agentic Kit installer supports command-line flags for automation, scripting, and
 Display help information:
 
 ```bash
-agentic-kit install --help
+liteagents install --help
 ```
 
 Output:
@@ -769,7 +769,7 @@ Output:
 Agentic Kit Interactive Multi-Tool Installer
 
 Usage:
-  agentic-kit install [options]
+  liteagents install [options]
 
 Options:
   --variant=<name>       Specify variant (lite, standard, pro)
@@ -782,10 +782,10 @@ Options:
   --help                 Display this help message
 
 Examples:
-  agentic-kit install
-  agentic-kit install --variant=standard --tools=claude
-  agentic-kit install --silent --config=install.json
-  agentic-kit install --uninstall --tools=claude
+  liteagents install
+  liteagents install --variant=standard --tools=claude
+  liteagents install --silent --config=install.json
+  liteagents install --uninstall --tools=claude
 ```
 
 #### `--version`
@@ -793,7 +793,7 @@ Examples:
 Display version information:
 
 ```bash
-agentic-kit install --version
+liteagents install --version
 ```
 
 Output:
@@ -811,13 +811,13 @@ Specify variant without interactive prompt:
 
 ```bash
 # Install Lite variant
-agentic-kit install --variant=lite
+liteagents install --variant=lite
 
 # Install Standard variant
-agentic-kit install --variant=standard
+liteagents install --variant=standard
 
 # Install Pro variant
-agentic-kit install --variant=pro
+liteagents install --variant=pro
 ```
 
 **Valid Values**: `lite`, `standard`, `pro`
@@ -828,13 +828,13 @@ Specify tools without interactive prompt:
 
 ```bash
 # Install single tool
-agentic-kit install --tools=claude
+liteagents install --tools=claude
 
 # Install multiple tools (comma-separated)
-agentic-kit install --tools=claude,opencode
+liteagents install --tools=claude,opencode
 
 # Install all tools
-agentic-kit install --tools=all
+liteagents install --tools=all
 ```
 
 **Valid Values**: `claude`, `opencode`, `ampcode`, `droid`, `all`
@@ -845,7 +845,7 @@ Specify custom installation path for a specific tool:
 
 ```bash
 # Single tool with custom path
-agentic-kit install --tools=claude --path claude=/opt/ai/claude
+liteagents install --tools=claude --path claude=/opt/ai/claude
 
 # Note: For multiple tools with different paths, use --config file instead
 ```
@@ -860,7 +860,7 @@ agentic-kit install --tools=claude --path claude=/opt/ai/claude
 Non-interactive installation (requires all parameters specified):
 
 ```bash
-agentic-kit install --silent --variant=standard --tools=claude
+liteagents install --silent --variant=standard --tools=claude
 ```
 
 **Behavior**:
@@ -879,8 +879,8 @@ agentic-kit install --silent --variant=standard --tools=claude
 Auto-confirm all prompts:
 
 ```bash
-agentic-kit install --yes
-agentic-kit install -y
+liteagents install --yes
+liteagents install -y
 ```
 
 **Behavior**:
@@ -894,7 +894,7 @@ agentic-kit install -y
 Load installation configuration from file:
 
 ```bash
-agentic-kit install --config=install-config.json
+liteagents install --config=install-config.json
 ```
 
 **Configuration File Format** (`install-config.json`):
@@ -938,13 +938,13 @@ Uninstall specified tools:
 
 ```bash
 # Uninstall single tool
-agentic-kit install --uninstall --tools=claude
+liteagents install --uninstall --tools=claude
 
 # Uninstall multiple tools
-agentic-kit install --uninstall --tools=claude,opencode
+liteagents install --uninstall --tools=claude,opencode
 
 # Uninstall all tools
-agentic-kit install --uninstall --tools=all
+liteagents install --uninstall --tools=all
 ```
 
 **Behavior**:
@@ -955,7 +955,7 @@ agentic-kit install --uninstall --tools=all
 
 **Silent Uninstall**:
 ```bash
-agentic-kit install --uninstall --silent --tools=claude --yes
+liteagents install --uninstall --silent --tools=claude --yes
 ```
 
 ### Flag Combinations
@@ -964,16 +964,16 @@ agentic-kit install --uninstall --silent --tools=claude --yes
 
 ```bash
 # Automated CI/CD installation
-agentic-kit install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
+liteagents install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
 
 # Quick default installation
-agentic-kit install --yes
+liteagents install --yes
 
 # Team configuration
-agentic-kit install --config=team-config.json --yes
+liteagents install --config=team-config.json --yes
 
 # Clean uninstall
-agentic-kit install --uninstall --tools=all --yes
+liteagents install --uninstall --tools=all --yes
 ```
 
 ### Exit Codes
@@ -993,7 +993,7 @@ The installer returns the following exit codes:
 ```bash
 #!/bin/bash
 
-agentic-kit install --silent --variant=standard --tools=claude
+liteagents install --silent --variant=standard --tools=claude
 
 if [ $? -eq 0 ]; then
   echo "Installation successful"
@@ -1013,7 +1013,7 @@ fi
 
 **Error Message**:
 ```
-✗ Permission denied: Cannot write to /opt/agentic-kit/claude/
+✗ Permission denied: Cannot write to /opt/liteagents/claude/
 ```
 
 **Cause**: Insufficient write permissions for installation directory
@@ -1022,25 +1022,25 @@ fi
 
 1. **Use default paths** (recommended):
 ```bash
-agentic-kit install
+liteagents install
 # Select: Use defaults (N)
 ```
 
 2. **Run with appropriate permissions**:
 ```bash
-sudo agentic-kit install --tools=claude --path claude=/opt/agentic-kit/claude
+sudo liteagents install --tools=claude --path claude=/opt/liteagents/claude
 ```
 
 3. **Choose writable location**:
 ```bash
-agentic-kit install
-# Customize path to: ~/agentic-kit/claude/
+liteagents install
+# Customize path to: ~/liteagents/claude/
 ```
 
 4. **Fix directory permissions**:
 ```bash
-sudo chown -R $USER:$USER /opt/agentic-kit
-agentic-kit install
+sudo chown -R $USER:$USER /opt/liteagents
+liteagents install
 ```
 
 ---
@@ -1070,13 +1070,13 @@ rm -rf ~/.claude-old
 
 2. **Install to different drive**:
 ```bash
-agentic-kit install
+liteagents install
 # Customize path to external drive: /mnt/external/.claude/
 ```
 
 3. **Use Lite variant**:
 ```bash
-agentic-kit install --variant=lite
+liteagents install --variant=lite
 ```
 
 ---
@@ -1094,14 +1094,14 @@ agentic-kit install --variant=lite
 
 1. **Reinstall package**:
 ```bash
-npm uninstall -g @amrhas82/agentic-kit
+npm uninstall -g liteagents
 npm cache clean --force
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 ```
 
 2. **Verify installation**:
 ```bash
-npm list -g @amrhas82/agentic-kit
+npm list -g liteagents
 ```
 
 3. **Check Node.js version**:
@@ -1130,7 +1130,7 @@ node --version  # Should be 14.0.0 or higher
 ^C
 
 # Retry installation
-agentic-kit install
+liteagents install
 ```
 
 3. **Check system resources**:
@@ -1145,7 +1145,7 @@ iostat -x 1
 4. **Install to faster filesystem**:
 ```bash
 # Avoid network drives, use local SSD
-agentic-kit install --tools=claude --path claude=/home/user/.claude/
+liteagents install --tools=claude --path claude=/home/user/.claude/
 ```
 
 ---
@@ -1163,8 +1163,8 @@ agentic-kit install --tools=claude --path claude=/home/user/.claude/
 
 1. **Uninstall and reinstall**:
 ```bash
-agentic-kit install --uninstall --tools=claude
-agentic-kit install --variant=standard --tools=claude
+liteagents install --uninstall --tools=claude
+liteagents install --variant=standard --tools=claude
 ```
 
 2. **Check filesystem**:
@@ -1178,7 +1178,7 @@ touch ~/.claude/test-write && rm ~/.claude/test-write
 
 3. **Use different path**:
 ```bash
-agentic-kit install --tools=claude --path claude=/tmp/.claude-test/
+liteagents install --tools=claude --path claude=/tmp/.claude-test/
 ```
 
 ---
@@ -1196,7 +1196,7 @@ Error: Cannot find module 'installer/cli.js'
 
 1. **Reinstall globally**:
 ```bash
-npm install -g @amrhas82/agentic-kit
+npm install -g liteagents
 ```
 
 2. **Check npm prefix**:
@@ -1242,8 +1242,8 @@ cat ~/.claude/config.json
 
 4. **Reinstall with default paths**:
 ```bash
-agentic-kit install --uninstall --tools=claude
-agentic-kit install --variant=standard --tools=claude
+liteagents install --uninstall --tools=claude
+liteagents install --variant=standard --tools=claude
 # Use default paths
 ```
 
@@ -1264,7 +1264,7 @@ agentic-kit install --variant=standard --tools=claude
 
 2. **Disable colors** (if needed):
 ```bash
-NO_COLOR=1 agentic-kit install
+NO_COLOR=1 liteagents install
 ```
 
 ---
@@ -1275,15 +1275,15 @@ If you encounter an issue not listed here:
 
 1. **Check logs**:
 ```bash
-cat ~/.agentic-kit-install.log
+cat ~/.liteagents-install.log
 ```
 
 2. **File an issue**:
-   - GitHub: https://github.com/amrhas82/agentic-kit/issues
+   - GitHub: https://github.com/amrhas82/liteagents/issues
    - Include: OS, Node.js version, error message, installation log
 
 3. **Community support**:
-   - Discussions: https://github.com/amrhas82/agentic-kit/discussions
+   - Discussions: https://github.com/amrhas82/liteagents/discussions
    - Discord: [link if available]
 
 ---
@@ -1350,7 +1350,7 @@ Times vary based on system performance.
 
 **A**: Yes! Use silent mode:
 ```bash
-agentic-kit install --silent --variant=standard --tools=claude
+liteagents install --silent --variant=standard --tools=claude
 ```
 
 #### Q: Do I need sudo/admin permissions?
@@ -1409,7 +1409,7 @@ agentic-kit install --silent --variant=standard --tools=claude
 
 **A**:
 ```bash
-agentic-kit install --uninstall --tools=claude
+liteagents install --uninstall --tools=claude
 ```
 
 #### Q: Will uninstalling remove my settings?
@@ -1423,14 +1423,14 @@ cp ~/.claude/config.json ~/claude-config-backup.json
 
 **A**: Yes:
 ```bash
-agentic-kit install --uninstall --tools=all
+liteagents install --uninstall --tools=all
 ```
 
 #### Q: Does uninstall remove the installer itself?
 
 **A**: No. To remove the installer:
 ```bash
-npm uninstall -g @amrhas82/agentic-kit
+npm uninstall -g liteagents
 ```
 
 ---
@@ -1456,7 +1456,7 @@ node --version
 
 **A**: Yes! Use silent mode:
 ```bash
-agentic-kit install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
+liteagents install --silent --variant=standard --tools=claude --path claude=/opt/ci/claude
 ```
 
 #### Q: Does installation require compilation?
@@ -1476,8 +1476,8 @@ agentic-kit install --silent --variant=standard --tools=claude --path claude=/op
 **A**:
 1. Check the error message
 2. Review the [Troubleshooting section](#troubleshooting)
-3. Check logs: `cat ~/.agentic-kit-install.log`
-4. Retry with: `agentic-kit install`
+3. Check logs: `cat ~/.liteagents-install.log`
+4. Retry with: `liteagents install`
 5. File an issue if problem persists
 
 #### Q: Tool can't find installed agents. Why?
@@ -1498,8 +1498,8 @@ agentic-kit install --silent --variant=standard --tools=claude --path claude=/op
 Example Dockerfile:
 ```dockerfile
 FROM node:18
-RUN npm install -g @amrhas82/agentic-kit
-RUN agentic-kit install --silent --variant=standard --tools=claude
+RUN npm install -g liteagents
+RUN liteagents install --silent --variant=standard --tools=claude
 ```
 
 ---
@@ -1510,7 +1510,7 @@ RUN agentic-kit install --silent --variant=standard --tools=claude
 
 **A**: Configuration is saved in:
 - Installation manifest: `~/.claude/manifest.json` (per tool)
-- Global config: `~/.agentic-kit-config.json`
+- Global config: `~/.liteagents-config.json`
 
 #### Q: Can I use a configuration file?
 
@@ -1526,7 +1526,7 @@ RUN agentic-kit install --silent --variant=standard --tools=claude
 
 Then run:
 ```bash
-agentic-kit install --config=install-config.json
+liteagents install --config=install-config.json
 ```
 
 #### Q: How do I customize which skills are installed?
@@ -1549,8 +1549,8 @@ agentic-kit install --config=install-config.json
 
 **A**: Yes:
 ```bash
-npm install -g @amrhas82/agentic-kit@beta
-agentic-kit install
+npm install -g liteagents@beta
+liteagents install
 ```
 
 #### Q: How do I contribute new agents or skills?
@@ -1575,9 +1575,9 @@ agentic-kit install
 Need help? Here's how to get support:
 
 1. **Documentation**: Check this guide and related docs
-2. **Issues**: https://github.com/amrhas82/agentic-kit/issues
-3. **Discussions**: https://github.com/amrhas82/agentic-kit/discussions
-4. **Email**: support@agentic-kit.dev (if available)
+2. **Issues**: https://github.com/amrhas82/liteagents/issues
+3. **Discussions**: https://github.com/amrhas82/liteagents/discussions
+4. **Email**: support@liteagents.dev (if available)
 
 ---
 

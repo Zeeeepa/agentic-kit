@@ -127,7 +127,7 @@ node tests/installer/path-handling-testing.test.js
 ```
 
 **Features Tested**:
-- `~/.agentic-kit` → `/home/user/.agentic-kit`
+- `~/.liteagents` → `/home/user/.liteagents`
 - `./local` → `/current/directory/local`
 - Path traversal prevention (`../../../etc/passwd` rejected)
 - Unicode support (émoji, 中文, العربية)
@@ -384,7 +384,7 @@ Recommended quality gates:
 **Solution**:
 ```bash
 # Manual cleanup
-rm -rf /tmp/agentic-kit-test-*
+rm -rf /tmp/liteagents-test-*
 rm -rf /tmp/variant-test-*
 rm -rf /tmp/multi-tool-test-*
 rm -rf /tmp/error-test-*

@@ -1,11 +1,11 @@
 {
-  "name": "@amrhas82/agentic-kit",
-  "version": "2.4.0",
+  "name": "liteagents",
+  "version": "2.4.1",
   "description": "AI development toolkit with 11 specialized agents and 20 commands. Simple one-question installer for Claude, Opencode, Ampcode, and Droid.",
   "main": "index.js",
   "bin": {
-    "agentic-kit": "./installer/cli.js",
-    "agkit": "./cli.js"
+    "liteagents": "./installer/cli.js",
+    "liteag": "./cli.js"
   },
   "scripts": {
     "test": "node tests/run-all-tests.js",
@@ -17,9 +17,6 @@
     "validate": "node ./scripts/validate-package.js",
     "validate-packages": "node scripts/validate-all-packages.js",
     "prepublishOnly": "npm run clean && npm run validate",
-    "publish:npm": "npm publish --registry https://registry.npmjs.org --access public",
-    "publish:github": "npm publish --registry https://npm.pkg.github.com",
-    "publish:both": "npm run publish:npm && npm run publish:github",
     "postinstall": "node postinstall.js"
   },
   "keywords": [
@@ -51,12 +48,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amrhas82/agentic-kit.git"
+    "url": "https://github.com/amrhas82/liteagents.git"
   },
   "bugs": {
-    "url": "https://github.com/amrhas82/agentic-kit/issues"
+    "url": "https://github.com/amrhas82/liteagents/issues"
   },
-  "homepage": "https://github.com/amrhas82/agentic-kit#readme",
+  "homepage": "https://github.com/amrhas82/liteagents#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"

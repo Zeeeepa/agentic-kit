@@ -116,10 +116,10 @@ This document outlines the security measures implemented in Agentic Kit and prov
 
 **File Permissions**:
 ```
-~/.agentic-kit-install.log        - 0600 (read/write owner only)
-~/.agentic-kit-config.json        - 0600 (read/write owner only)
-~/.agentic-kit-telemetry.log      - 0600 (read/write owner only)
-~/.agentic-kit-install-state.json - 0600 (read/write owner only)
+~/.liteagents-install.log        - 0600 (read/write owner only)
+~/.liteagents-config.json        - 0600 (read/write owner only)
+~/.liteagents-telemetry.log      - 0600 (read/write owner only)
+~/.liteagents-install-state.json - 0600 (read/write owner only)
 ```
 
 **Code Locations**:
@@ -229,7 +229,7 @@ node installer/cli.js --variant standard --tools claude
 3. **Use Default Paths**: Default paths are safer and well-tested
 4. **Keep Node.js Updated**: Ensure you're using a supported Node.js version
 5. **Review Logs**: Check installation logs for unexpected behavior
-6. **Verify Sources**: Only download agentic-kit from official sources
+6. **Verify Sources**: Only download liteagents from official sources
 
 ### For Developers
 

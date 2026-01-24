@@ -11,7 +11,7 @@ This document provides a detailed visual demonstration of the Agentic Kit intera
 ### Step 1: Launch the Installer
 
 ```bash
-$ agentic-kit install
+$ liteagents install
 ```
 
 **Output:**
@@ -288,7 +288,7 @@ Next steps:
 
 Documentation:
   • Installation guide: /home/user/.claude/README.md
-  • Troubleshooting: https://github.com/amrhas82/agentic-kit/docs/INSTALLER_GUIDE.md
+  • Troubleshooting: https://github.com/amrhas82/liteagents/docs/INSTALLER_GUIDE.md
 
 Thank you for installing Agentic Kit!
 ```
@@ -300,7 +300,7 @@ Thank you for installing Agentic Kit!
 For automated environments, use silent mode:
 
 ```bash
-$ agentic-kit install --silent --variant=standard --tools=claude
+$ liteagents install --silent --variant=standard --tools=claude
 ```
 
 **Output:**
@@ -321,7 +321,7 @@ Total: 29 files, 8.39 MB, 12.3s
 Installing multiple tools at once:
 
 ```bash
-$ agentic-kit install --variant=standard --tools=claude,opencode
+$ liteagents install --variant=standard --tools=claude,opencode
 ```
 
 **Output:**
@@ -374,7 +374,7 @@ Installation time: 24.6 seconds
 Installing to a custom location:
 
 ```bash
-$ agentic-kit install
+$ liteagents install
 ```
 
 **Step 3 - Custom Path:**
@@ -391,9 +391,9 @@ Default installation paths:
 Do you want to customize any paths? (y/N): y
 
 Enter custom path for Claude (or press Enter for default):
-> /opt/agentic-kit/claude
+> /opt/liteagents/claude
 
-Validating path: /opt/agentic-kit/claude
+Validating path: /opt/liteagents/claude
 
   ✓ Path is absolute
   ✓ Parent directory exists
@@ -406,7 +406,7 @@ Validating path: /opt/agentic-kit/claude
 ╚═══════════════════════════════════════════════╝
 
 Tool: Claude
-Proposed Path: /opt/agentic-kit/claude
+Proposed Path: /opt/liteagents/claude
 Default Path:  /home/user/.claude/
 
 This is different from the default path.
@@ -418,7 +418,7 @@ Validation Results:
 
 Do you want to proceed with this custom path? (y/N): y
 
-✓ Using custom path: /opt/agentic-kit/claude
+✓ Using custom path: /opt/liteagents/claude
 ```
 
 ---
@@ -428,7 +428,7 @@ Do you want to proceed with this custom path? (y/N): y
 Removing an installed tool:
 
 ```bash
-$ agentic-kit install --uninstall --tools=claude
+$ liteagents install --uninstall --tools=claude
 ```
 
 **Output:**
@@ -475,7 +475,7 @@ Total: 29 files deleted, 8.39 MB freed
 Upgrading an existing installation:
 
 ```bash
-$ agentic-kit install --variant=standard --tools=claude
+$ liteagents install --variant=standard --tools=claude
 ```
 
 **Output:**
@@ -550,9 +550,9 @@ Installation aborted.
 Suggestions:
   1. Free up disk space and try again
   2. Install to a different location with more space:
-     agentic-kit install --path claude=/mnt/external/.claude
+     liteagents install --path claude=/mnt/external/.claude
   3. Use Lite variant (only 510 KB):
-     agentic-kit install --variant=lite
+     liteagents install --variant=lite
 
 No files were created.
 ```
@@ -563,7 +563,7 @@ No files were created.
 Installing Claude (Standard variant)...
 
 ERROR: Permission denied
-  Cannot write to: /opt/agentic-kit/claude/
+  Cannot write to: /opt/liteagents/claude/
   User: user
   Required: Write permissions
 
@@ -571,9 +571,9 @@ Installation aborted.
 
 Suggestions:
   1. Run with appropriate permissions:
-     sudo agentic-kit install --tools=claude --path claude=/opt/agentic-kit/claude
+     sudo liteagents install --tools=claude --path claude=/opt/liteagents/claude
   2. Install to a writable location:
-     agentic-kit install  (uses ~/.claude/ by default)
+     liteagents install  (uses ~/.claude/ by default)
 
 No files were created.
 ```
@@ -593,10 +593,10 @@ Rollback in progress...
   ✓ Removed partial installation
   ✓ Cleaned up temporary files
 
-Installation state saved to: /home/user/.agentic-kit-state.json
+Installation state saved to: /home/user/.liteagents-state.json
 
 To resume installation later, run:
-  agentic-kit install
+  liteagents install
 
 No files were left behind.
 ```
@@ -664,28 +664,28 @@ No files were left behind.
 
 **Basic Installation:**
 ```bash
-npm install -g @amrhas82/agentic-kit
-agentic-kit install
+npm install -g liteagents
+liteagents install
 ```
 
 **Silent Installation:**
 ```bash
-agentic-kit install --silent --variant=standard --tools=claude
+liteagents install --silent --variant=standard --tools=claude
 ```
 
 **Multi-Tool:**
 ```bash
-agentic-kit install --variant=pro --tools=all
+liteagents install --variant=pro --tools=all
 ```
 
 **Custom Path:**
 ```bash
-agentic-kit install --tools=claude --path claude=/custom/path
+liteagents install --tools=claude --path claude=/custom/path
 ```
 
 **Uninstall:**
 ```bash
-agentic-kit install --uninstall --tools=claude
+liteagents install --uninstall --tools=claude
 ```
 
 **For more details, see [INSTALLER_GUIDE.md](./INSTALLER_GUIDE.md)**

@@ -1,6 +1,6 @@
 # Variant Configuration Guide
 
-**Purpose:** This document explains the rationale for variant configurations and skill selection across all agentic-kit tools (Claude, Opencode, Ampcode, Droid).
+**Purpose:** This document explains the rationale for variant configurations and skill selection across all liteagents tools (Claude, Opencode, Ampcode, Droid).
 
 **Last Updated:** 2025-11-04
 
@@ -18,7 +18,7 @@
 
 ## Variant Philosophy
 
-The agentic-kit installer offers **three variant levels** to accommodate different user needs and resource constraints:
+The liteagents installer offers **three variant levels** to accommodate different user needs and resource constraints:
 
 ### Design Principles
 
@@ -153,7 +153,7 @@ These advanced skills are available only in the **Pro variant**:
 - All hooks
 
 **Use Cases:**
-- Try agentic-kit with minimal commitment
+- Try liteagents with minimal commitment
 - Learn the agent system before full installation
 - Limited resource environments (cloud VMs, containers)
 - Quick setup for demonstrations
@@ -269,7 +269,7 @@ While all tools share the same variant structure and core skills, each has optim
 ### Choosing a Variant
 
 **Start with Lite if:**
-- You're evaluating agentic-kit for the first time
+- You're evaluating liteagents for the first time
 - You have limited disk space (< 50 MB available)
 - You only need basic workflow management
 - You want to learn the system before full installation
@@ -358,7 +358,7 @@ Skills are updated independently of agents:
 
 ### Variant Evolution
 
-As agentic-kit evolves, variant definitions may change:
+As liteagents evolves, variant definitions may change:
 
 **Standard Variant Philosophy:**
 - Will always include essential document processing (pdf, docx, xlsx, pptx)

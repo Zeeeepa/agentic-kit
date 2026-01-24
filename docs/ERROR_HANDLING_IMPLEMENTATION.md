@@ -31,7 +31,7 @@ Implemented `categorizeError()` method that identifies and categorizes errors in
    - Recommends offline mode if available
 
 4. **Missing Package Errors** (ENOENT)
-   - Suggests reinstalling agentic-kit
+   - Suggests reinstalling liteagents
    - Provides npm commands for reinstallation
    - Verifies package directory existence
 
