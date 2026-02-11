@@ -9,7 +9,7 @@
          ╚══════╝╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 ```
 
-**AI development toolkit with 11 specialized agents and 20 commands per tool**
+**AI development toolkit with 11 specialized agents and 22 commands per tool**
 
 [![npm version](https://img.shields.io/npm/v/liteagents)](https://www.npmjs.com/package/liteagents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -43,10 +43,10 @@ liteagents
 
 ### Supported Tools
 
-- **Claude Code** - 11 subagents + 10 skills + 10 commands
-- **Opencode** - 11 agent references + 20 commands
-- **Ampcode** - 11 subagents + 10 skills + 10 commands
-- **Droid** - 11 agent references + 20 commands
+- **Claude Code** - 11 subagents + 10 skills + 12 commands
+- **Opencode** - 11 agent references + 22 commands
+- **Ampcode** - 11 subagents + 10 skills + 12 commands
+- **Droid** - 11 agent references + 22 commands
 
 **Key Difference:**
 - **Claude Code**: Full subagent system with orchestrator + skills (auto-triggering)
@@ -88,14 +88,14 @@ liteagents
 - **system-architect** - System design, technology selection, API design, scalability planning
 - **ui-designer** - UI/UX design, wireframes, prototypes, accessibility, design systems
 
-### 20 Commands/Skills
+### 22 Commands/Skills
 
 **Auto-Triggering Skills (3)** - Claude Code only:
 - **test-driven-development** - Write test first, watch fail, minimal passing code
 - **testing-anti-patterns** - Prevent mocking anti-patterns
 - **verification-before-completion** - Verify before claiming done
 
-**Manual Skills/Commands (17):**
+**Manual Skills/Commands (19):**
 - **brainstorming** - Structured brainstorming sessions
 - **code-review** - Implementation review against requirements
 - **condition-based-waiting** - Replace timeouts with condition polling
@@ -105,14 +105,30 @@ liteagents
 - **systematic-debugging** - Four-phase debugging framework
 - **debug** - Systematic issue investigation
 - **explain** - Explain code for newcomers
+- **friction** - Analyze session logs for failure patterns and behavioral signals
 - **git-commit** - Intelligent commit creation
 - **optimize** - Performance analysis
 - **refactor** - Safe refactoring with behavior preservation
+- **remember** - Consolidate stashes + friction into project memory
 - **review** - Comprehensive code review
 - **security** - Vulnerability scanning
 - **ship** - Pre-deployment checklist
 - **stash** - Save session context for compaction recovery or handoffs
 - **test-generate** - Generate test suites
+
+### Hot Memory (3-step pipeline)
+
+Lightweight session memory that learns from your usage patterns.
+
+```
+/stash → /friction → /remember
+```
+
+1. **`/stash`** - Snapshot current session context to `.claude/stash/`. Use before compaction, handoffs, or ending complex work.
+2. **`/friction`** - Analyze session logs for failure patterns. Scores sessions, clusters failures, outputs actionable antigens.
+3. **`/remember`** - Consolidate stashes + friction into `.claude/memory/MEMORY.md`. Extracts facts, episodes, and behavioral preferences. Injects into CLAUDE.md via `@MEMORY.md`.
+
+**Result:** Project-local memory that accumulates across sessions — no external dependencies, no databases, just markdown.
 
 ---
 
@@ -158,7 +174,7 @@ liteagents
 ## 📊 Stats
 
 - **11** Specialized Agents
-- **20** Workflow Commands & Skills
+- **22** Workflow Commands & Skills
 - **4** Supported Tools (Claude, Opencode, Ampcode, Droid)
 - **MIT** License
 
